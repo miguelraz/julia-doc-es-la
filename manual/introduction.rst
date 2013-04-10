@@ -1,7 +1,7 @@
 .. _man-introduction:
 
 **************
- Introdução    
+Introducción   
 **************
 
 Computação científica tem requerido, tradicionalmente, alta performace embora
