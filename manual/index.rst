@@ -2,7 +2,7 @@
 .. _manual-index:
 
 ###################
- Manual de Julia
+ O Manual de Julia
 ###################
 
 :Release: |version|
