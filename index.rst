@@ -1,6 +1,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%
- Documentação de Julia
+ Documentación de Julia
 %%%%%%%%%%%%%%%%%%%%%%%
 
 .. toctree::
@@ -16,7 +16,7 @@
 * :ref:`genindex`
 * :ref:`search`
 
-Traduções
+Traducciones
 =========
 
 * `The Julia Manual (简体中文) <http://julia_zh_cn.readthedocs.org/en/latest/manual>`_
