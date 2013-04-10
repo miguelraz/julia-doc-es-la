@@ -1,8 +1,7 @@
-
 .. _stdlib-index:
 
 ##########################################
- A Biblioteca Padrão de Julia (em inglês)
+ A Biblioteca por defecto de Julia (em inglés)
 ##########################################
 
 :Release: |version|
