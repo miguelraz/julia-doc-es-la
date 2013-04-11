@@ -1,4 +1,3 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%
  Documentación de Julia
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -10,7 +9,7 @@
    stdlib/index
    packages/packagelist
 
-Índices e tabelas
+Índices y tablas
 =================
 
 * :ref:`genindex`
@@ -20,3 +19,4 @@ Traducciones
 =========
 
 * `The Julia Manual (简体中文) <http://julia_zh_cn.readthedocs.org/en/latest/manual>`_
+* `The Julia Manual (Português brasileiro) <https://julia_pt-br.readthedocs.org/en/latest/>`_
