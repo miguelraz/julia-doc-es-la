@@ -27,17 +27,18 @@ conecida como *read-eval-print loop* ou *"repl"* [#REPL-en]_)::
     julia> ans
     3
 
-Para encerrar a sessão interative, digite ``^D```- a tecla *Ctrl* 
-em conjunto da tecla ``d`` - ou digite ``quit()``. Quando utilizando 
-Julia no modo interativo, ``julia`` mostra um *banner* e espera o 
-usuário digitar um comando. Uma vez que o usuário digitou comando,
-como `1 + 2`, e pressionou *enter*, a sessão interativa calcula a 
-expressão e mostra o resultado. Se uma expressão é inserida em uma 
-sessão interativa com um ponto-e-vírgula no final, seu resultado será
-calculado, mas não mostrado. A variável ``ans`` armazena o resultado 
-da última expressão calculada, tendo sido mostrada ou não.
 
-Para calcular expressões escritas em um arquivo ``file.jl``, digite
+Para cerrar la sesión interactiva, digite ``^D```- la tecla *Ctrl* 
+en conjunto la tecla ``d`` - o digite ``quit()``. Cuando utilize 
+Julia en modo interativo, ``julia`` muestra un *banner* y espera al 
+usuário que digite un comando. Una vez que el usuário digitó el comando,
+como `1 + 2`, y presione *enter*, la sesión interativa calcula la 
+expresión y muestra el resultado. Si una expresión es insertada en una 
+sesión interativa con un punto-y-vírgula al final, su resultado será
+calculado, pero no será mostrado. La varible ``ans`` almacena el resultado 
+de la última expresión calculada, después de haber sido mostrado o no.
+
+Para calcular expresiones escritas en un archivo ``file.jl``, luego digite
 ``include("file.jl")``.
 
 Para rodar código em um arquivo de maneira não-interativa, você pode
