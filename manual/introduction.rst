@@ -4,36 +4,28 @@
 Introducción   
 **************
 
-Computação científica tem requerido, tradicionalmente, alta performace embora
-grandes nomes da área tenham passado a utilizar linguagens dinâmicas lentas
-para o trabalho diário. Acreditamos que existam várias boas razões para
-preferir utilizar linguagens dinâmicas em suas aplicações, e não esperamos
-desmerecer seu uso. Felizmente, as modernas técnicas para criação de linguagens
-e de compilação torna possível eliminar, quase totalmente, o problema de
-desempenho de linguagens dinâmicas e prover um ambiente produtivo para
-experimentação e eficiente para produção de aplicativos que precisam de alto
-desempenho. A linguagem de programação Julia preenche esse buraco: é uma
-linguagem dinâmica, apropriada para computação numérica e científica, com um
-desempenho comparável a linguagens estáticas tradicionalmente utilizadas.
+La Computación científica ha requerido tradicionalmente el más alto rendimiento,sin embargo, 
+los expertos en este ambito se han cambiado en gran parte a lenguajes dinámicos más lentos 
+para el trabajo diario. Creemos que hay muchas buenas razones para preferir lenguajes dinámicos 
+para estas aplicaciones, y no esperamos que su uso disminuya. Afortunadamente, las técnicas modernas para
+la creación de lenguajes y las de compilador hacen posible eliminar, casi en su totalidad, el problema del 
+desempeño de los lenguajes dinámicos y proporcionar un ambiente productivo para la creación de prototipos y 
+lo suficientemente eficiente para el despliegue de aplicaciones con gran rendimiento. El lenguaje de programación 
+Julia cumple este papel: es un lenguaje dinámico flexible, apropiado para cálculo científico y numérico, con un 
+rendimiento comparable a los tradicionales lenguajes de tipo estático.
 
-As características de Julia são tipagem opcional, *multiple dispatch*, e bom
-desempenho, alcançado utilizando inferência de tipos e compilação
-*just-in-time* (JIT) [#JIT-en]_, [#JIT-pt]_,
-implementada utilizando
-*LLVM* [#LLVM-en]_, [#LLVM-pt]_. Ela é
-multi-paradigma, combinando características de programação imperativa,
-funcional e orientada a objetos. A sintaxe de Julia é similar a do `GNU Octave
-<http://en.wikipedia.org/wiki/GNU_Octave>`_ ou `MATLAB(R)
-<http://en.wikipedia.org/wiki/Matlab>`_ e consequentemente os programadores que
-que já utilizam estas linguagens devem sentir-se imediatamente confortáveis com
-Julia. Enquanto MATLAB(R) é um bem eficiente para experimentações e explorações
-de álgebra linear numérica, possui limitações para tarefas computacionais fora
-deste campo relativamente pequeno. Julia mantem a facilidade e expressividade
-do MATLAB(R) para computação numérica de alto nível, mas ultrapassa as
-limitações comparadas a uma linguagem de programação de propósito geral. Para
-alcançar isso, Julia é construída com heranças das linguagens de programação
-matemática, mas também herda muito de outras linguagens dinâmicas populares,
-incluindo
+Julia presenta la mecanografía opcional,envío múltiple, y un buen rendimiento, alcanzado con el uso de 
+inferencia de tipos y la compilación justo a tiempo *just-in-time* (JIT)[#JIT-en]_, [#JIT-pt]_,
+implementada usando *LLVM* [#LLVM-en]_, [#LLVM-pt]_.Es un multi-paradigma, que combina características 
+de programación imperativa, funcional y orientado a objetos.  La sintaxis de Julia es similar a la de 
+`GNU Octave<http://en.wikipedia.org/wiki/GNU_Octave>`_ ou `MATLAB(R) <http://en.wikipedia.org/wiki/Matlab>`_
+y por consiguiente los programadores de MATLAB deberían sentirse inmediatamente cómodos con Julia.
+ Mientras que MATLAB es muy eficaz para el prototipado y la exploración de álgebra lineal numérica, tiene 
+limitaciones para la programación de tareas fuera de este alcance relativamente estrecho.
+Julia mantiene la facilidad y expresividad del MATLAB(R) para el cálculo numérico de alto nivel, 
+sino que trasciende sus limitaciones generales de programación. Para lograr esto, Julia se basa 
+en el linaje de los lenguajes de programación matemática, pero también toma mucho de lenguajes populares dinámicos, 
+incluyendo 
 `Lisp <http://en.wikipedia.org/wiki/Lisp_(programming_language)>`_,
 `Perl <http://en.wikipedia.org/wiki/Perl_(programming_language)>`_,
 `Python <http://en.wikipedia.org/wiki/Python_(programming_language)>`_,
