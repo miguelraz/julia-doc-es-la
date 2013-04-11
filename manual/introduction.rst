@@ -19,7 +19,7 @@ inferencia de tipos y la compilación justo a tiempo *just-in-time* (JIT),
 implementada usando `LLVM <http://en.wikipedia.org/wiki/Low_Level_Virtual_Machine>`_.
 Es un multi-paradigma, que combina características 
 de programación imperativa, funcional y orientado a objetos.  La sintaxis de Julia es similar a la de 
-`GNU Octave<http://en.wikipedia.org/wiki/GNU_Octave>`_ ou `MATLAB(R) <http://en.wikipedia.org/wiki/Matlab>`_
+`GNU Octave <http://en.wikipedia.org/wiki/GNU_Octave>`_ o `MATLAB(R) <http://en.wikipedia.org/wiki/Matlab>`_
 y por consiguiente los programadores de MATLAB deberían sentirse inmediatamente cómodos con Julia.
  Mientras que MATLAB es muy eficaz para el prototipado y la exploración de álgebra lineal numérica, tiene 
 limitaciones para la programación de tareas fuera de este alcance relativamente estrecho.
@@ -33,8 +33,8 @@ incluyendo
 `Lua <http://en.wikipedia.org/wiki/Lua_(programming_language)>`_, and
 `Ruby <http://en.wikipedia.org/wiki/Ruby_(programming_language)>`_.
 
-As características mas significativas de Julia em relação a linguagens
-dinâmicas típicas são:
+Las características mas significativas de Julia en relación a los lenguajes
+dinámicos típicos son:
 
 -  O núcleo da linguagem impõe muito pouco; a biblioteca padrão é escrita
    utilizando a própria linguagem Julia, incluindo operadores primitivos como
