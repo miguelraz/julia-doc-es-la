@@ -1,15 +1,15 @@
 .. _man-getting-started:
 
 ***********
- Começando  
+ Comenzando  
 ***********
 
-A instalação de Julia é direta, seja com utilizando binário pré-compilados, seja
-compilando o código-fonte. Baixe e instale Julia seguindo as 
-instruções (em inglês) em `http://julialang.org/downloads/ <http://julialang.org/downloads/>`_.
+La instalación de Julia es directa, sea  utilizando arquivos binários pre-compilados, sea
+compilando el código-fuente. Baje e instale Julia siguiendo las 
+instrucciones (em inglés) en `http://julialang.org/downloads/ <http://julialang.org/downloads/>`_.
 
-A maneira mais fácil de aprender e experimentar com Julia é iniciando 
-sessão interativa (também conhecida como *read-eval-print loop* ou *"repl"* [#REPL-en]_)::
+La manera más facil de aprender y experimentar con Julia es iniciando una sesión interactiva (também
+conecida como *read-eval-print loop* ou *"repl"* [#REPL-en]_)::
 
     $ julia
                    _
