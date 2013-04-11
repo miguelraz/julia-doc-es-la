@@ -15,8 +15,9 @@ Julia cumple este papel: es un lenguaje dinámico flexible, apropiado para cálc
 rendimiento comparable a los tradicionales lenguajes de tipo estático.
 
 Julia presenta la mecanografía opcional,envío múltiple, y un buen rendimiento, alcanzado con el uso de 
-inferencia de tipos y la compilación justo a tiempo *just-in-time* (JIT)[#JIT-en]_, [#JIT-pt]_,
-implementada usando *LLVM* [#LLVM-en]_, [#LLVM-pt]_.Es un multi-paradigma, que combina características 
+inferencia de tipos y la compilación justo a tiempo *just-in-time* (JIT),
+implementada usando `LLVM <http://en.wikipedia.org/wiki/Low_Level_Virtual_Machine>`_.
+Es un multi-paradigma, que combina características 
 de programación imperativa, funcional y orientado a objetos.  La sintaxis de Julia es similar a la de 
 `GNU Octave<http://en.wikipedia.org/wiki/GNU_Octave>`_ ou `MATLAB(R) <http://en.wikipedia.org/wiki/Matlab>`_
 y por consiguiente los programadores de MATLAB deberían sentirse inmediatamente cómodos con Julia.
