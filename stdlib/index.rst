@@ -1,8 +1,7 @@
-
 .. _stdlib-index:
 
 ############################
- The Julia Standard Library
+ La libreria estándar de Julia 
 ############################
 
 :Release: |version|
