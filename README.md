@@ -12,13 +12,13 @@ Contribuciones son siempre bienvenidas, y puede ser realizadas de la siguientes 
 Recomendaciones
 -------------
 
-Para uniformizar y organizar la traducción, há algunas recomendaciones abajo.
+Para uniformizar y organizar la traducción, hay algunas recomendaciones abajo.
 Todas ellas puede ser alteradas caso la mayoría llegue a un acuerdo, pero en general 
-es bueno mantenerlas para garantizar um proyecto fácil de ser administrado y actualizado.
+es bueno mantenerlas para garantizar un proyecto fácil de ser administrado y actualizado.
 
-Las lineas deben preferentemente tener 71 caracteres o menos, para facilitar la edición
-del texto en los celulares, tabletas, etc. Se dos líneas están en sequencia, ellas no van 
-poder ser unidas en el mismo párrafo automaticamente en la documentación final.
+Las lineas deben preferentemente tener 71 carácteres o menos, para facilitar la edición
+del texto en los celulares, tabletas, etc. Si dos líneas están en secuencia, ellas no van 
+a poder ser unidas en el mismo párrafo automaticamente en la documentación final.
 
 Términos en lengua extranjera deben estar en itálico.
 
