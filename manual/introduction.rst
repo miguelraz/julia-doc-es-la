@@ -88,17 +88,17 @@ vantagens de Julia em comparação com outros sistemas são:
    vetorizados são rápidos
 -  Projetado para computação paralela e distribuída
 -  *Lightweight "green" threading coroutines* [#COR-en]_, [#COR-pt]_
--  Sistemas de tipos não obstrutivos mas poderoso
+-  Sistemas de tipos no obstrutivos mas poderosos
 -  Conversão e promoção de tipos numéricos e outros de forma elegante e
    extensível
--  Suporte eficiente para
-   `Unicode <http://en.wikipedia.org/wiki/Unicode>`_, incluindo mas não
+-  Soporte eficiente para
+   `Unicode <http://en.wikipedia.org/wiki/Unicode>`_, incluyendo pero no
    limitado ao `UTF-8 <http://en.wikipedia.org/wiki/UTF-8>`_
--  Chamadas de funções em C de forma direta (sem necessidade de *wrappers* ou
+-  Llamadas de funciones en C de forma directa (sin necessidad de *wrappers* o
    *API* especial)
--  Capacidade semelhante a de uma poderosa *shell* para gerenciar outros
-   processos
--  Macros de forma parecida a Lisp e outras facilidades de metaprogramação
+-  Capacidad semejante a  una poderosa *shell* para gerenciar otros
+   procesos
+-  Macros de forma similar a Lisp y otras facilidades de metaprogramación
 
 .. rubric:: Notas de rodapé
 
