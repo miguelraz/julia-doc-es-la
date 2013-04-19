@@ -36,16 +36,16 @@ incluyendo
 Las características mas significativas de Julia en relación a los lenguajes
 dinámicos típicos son:
 
--  O núcleo da linguagem impõe muito pouco; a biblioteca padrão é escrita
-   utilizando a própria linguagem Julia, incluindo operadores primitivos como
-   operações aritméticas de inteiros
--  Uma grande variedades de tipos para construir e descrever objetos, que pode
-   também, opcionalmente, ser utilizado para fazer declarações de tipos
--  A habilidade de definir o comportamento de funções com base na combinação de
-   vários tipos de argumentos via *multiple dispatch* [#MD-en]_, [#MD-pt]_
--  Geração automática de código eficiente e especializado para diferentes tipos
-   de argumentos
--  Bom desempenho, aproximando-se de linguagens estáticas e compiladas como C
+-  El núcleo del lenguaje impone muy poco, la biblioteca estándar está escrita 
+   en el propio lenguaje Julia, incluidas las operaciones primitivas como las operaciones
+   aritmética de enteros
+-  Una variedad grande de tipos para construir y describir objetos, que también,
+   puede utilizarse opcionalmente, para hacer declaraciones de tipos
+-  La capacidad de definir el comportamiento de funciones a través de la combinación
+   de varios tipos de argumentos via *multiple dispatch* [#MD-en]_, [#MD-pt]_
+-  Generación automática de código eficiencia y especializado para diferentes 
+   tipos de argumentos
+-  Buen rendimiento, acercándose a la de los lenguajes estáticamente e compilados como C
 
 Embora alguns por vezes digam que linguagens dinâmicas não são tipadas,
 elas definitivamente são: todo objeto, seja primitivo ou definido pelo usuário,
