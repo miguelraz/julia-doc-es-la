@@ -1,51 +1,52 @@
 .. _man-arrays:
 
 *********
- Arrays   
+ Arreglos   
 *********
 
-Julia, like most technical computing languages, provides a first-class
-array implementation. Most technical computing languages pay a lot of
-attention to their array implementation at the expense of other
-containers. Julia does not treat arrays in any special way. The array
-library is implemented almost completely in Julia itself, and derives
-its performance from the compiler, just like any other code written in
-Julia.
+Julia, como la mayoría de lenguajes de computación técnica, 
+La mayoría de los lenguajes de computación técnica ponen mucha 
+atención a su implementación de arreglos a expensas de otros contenedores. 
+Julia no trata a los arreglos de ninguna manera especial. La librería de
+arreglos se implementa casi por completo en sí mismo en Julia, y deriva 
+su rendimiento del compilador, al igual que cualquier otro tipo de código 
+escrito en Julia.
 
-An array is a collection of objects stored in a multi-dimensional
-grid.  In the most general case, an array may contain objects of type
-``Any``.  For most computational purposes, arrays should contain
-objects of a more specific type, such as ``Float64`` or ``Int32``.
+Un arreglo es una colección de objetos almacenados en una rejilla 
+de dimensión múltiple. En el caso más general, un arreglo puede contener
+objetos de tipo ``Cualquiera``. Para la mayoría de los fines de cálculo,
+los arreglos deben contener objetos de un tipo más específico, como por
+ejemplo `` float64 `` o `` `` Int32.
 
-In general, unlike many other technical computing languages, Julia does
-not expect programs to be written in a vectorized style for performance.
-Julia's compiler uses type inference and generates optimized code for
-scalar array indexing, allowing programs to be written in a style that
-is convenient and readable, without sacrificing performance, and using
-less memory at times.
+En general, a diferencia de muchos otros lenguajes de computación técnica, 
+Julia no espera que los programas que se escriban en un estilo vectorizado 
+para el rendimiento. El compilador de Julia utiliza la inferencia de tipos
+y genera código optimizado para la indexación de arreglo escalar, permitiendo 
+que los programas sean escritos en un estilo que es conveniente y fácil de leer, 
+sin sacrificar el rendimiento, y el uso a veces de menos memoria.
 
-In Julia, all arguments to functions are passed by reference. Some
-technical computing languages pass arrays by value, and this is
-convenient in many cases. In Julia, modifications made to input arrays
-within a function will be visible in the parent function. The entire
-Julia array library ensures that inputs are not modified by library
-functions. User code, if it needs to exhibit similar behaviour, should
-take care to create a copy of inputs that it may modify.
+En Julia, todos los argumentos de las funciones son pasados por referencia. Algunos
+lenguajes de computación técnica pasan arreglos por valor, y esto es conveniente 
+en muchos casos. En Julia, las modificaciones realizadas a los arreglos de entrada 
+dentro de una función serán visibles en la función de los padres. La biblioteca 
+completa de arreglo de Julia asegura que las entradas no se modifican con funciones 
+de la biblioteca. El código de usuario, si es necesario exhibir un comportamiento
+similar, debe tener cuidado de crear una copia de entradas que puede modificar.
 
-Basic Functions
+
+Funciones básicas
 ---------------
 
-1. ``ndims(A)`` — the number of dimensions of A
-2. ``size(A,n)`` — the size of A in a particular dimension
-3. ``size(A)`` — a tuple containing the dimensions of A
-4. ``eltype(A)`` — the type of the elements contained in A
-5. ``length(A)`` — the number of elements in A
-6. ``nnz(A)`` — the number of nonzero values in A
+1. ``ndims(A)`` — el número de dimensiones de A
+2. ``size(A,n)`` — el tamaño de A en una particular dimensión
+3. ``size(A)`` — una tupla que contiene las dimensiones de A
+4. ``eltype(A)`` — el tipo de elementos que contiene en A 
+5. ``length(A)`` — o número de elementos en A
+6. ``nnz(A)`` — o número de valores diferentes de cero en A
 7. ``stride(A,k)`` — the size of the stride along dimension k
-8. ``strides(A)`` — a tuple of the linear index distances between
-   adjacent elements in each dimension
+8. ``strides(A)`` — una tupla de las distancias de índices lineales entre elementos adyacentes en cada dimensión
 
-Construction and Initialization
+Construcción e Inicialización 
 -------------------------------
 
 Many functions for constructing and initializing arrays are provided. In
@@ -132,7 +133,7 @@ and its left and right neighbour along a 1-d grid.
      0.245097
      0.241854
 
-NOTE: In the above example, ``x`` is declared as constant because type
+NOTA: In the above example, ``x`` is declared as constant because type
 inference in Julia does not work as well on non-constant global
 variables.
 
@@ -181,7 +182,7 @@ Indexing syntax is equivalent to a call to ``getindex``::
 
     X = getindex(A, I_1, I_2, ..., I_n)
 
-Example::
+Ejemplo::
 
     julia> x = reshape(1:16, 4, 4)
     4x4 Int64 Array
