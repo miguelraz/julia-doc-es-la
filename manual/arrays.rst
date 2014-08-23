@@ -49,46 +49,43 @@ Funciones básicas
 Construcción e Inicialización 
 -------------------------------
 
-Many functions for constructing and initializing arrays are provided. In
-the following list of such functions, calls with a ``dims...`` argument
-can either take a single tuple of dimension sizes or a series of
-dimension sizes passed as a variable number of arguments.
+Se facilitan muchas funciones para construir e inicializar arrays. En
+la siguiente lista de funciones, llamadas con un argumento ``dims...``
+pueden tomar o bien una única tupla de dimensión dims o una serie de 
+tamaños de dimensión pasada como un número variable de argumentos.
 
-1.  ``Array(type, dims...)`` — an uninitialized dense array
+1.  ``Array(type, dims...)`` — array denso no inicializado
 2.  ``cell(dims...)`` — an uninitialized cell array (heterogeneous
     array)
-3.  ``zeros(type, dims...)`` — an array of all zeros of specified type
-4.  ``ones(type, dims...)`` — an array of all ones of specified type
-5.  ``trues(dims...)`` — a ``Bool`` array with all values ``true``
-6.  ``falses(dims...)`` — a ``Bool`` array with all values ``false``
-7.  ``reshape(A, dims...)`` — an array with the same data as the given
-    array, but with different dimensions.
-8.  ``copy(A)``  — copy ``A``
-9.  ``deepcopy(A)`` — copy ``A``, recursively copying its elements
-10. ``similar(A, element_type, dims...)`` — an uninitialized array of
-    the same type as the given array (dense, sparse, etc.), but with the
-    specified element type and dimensions. The second and third
-    arguments are both optional, defaulting to the element type and
-    dimensions of ``A`` if omitted.
-11. ``reinterpret(type, A)`` — an array with the same binary data as the
-    given array, but with the specified element type.
-12. ``rand(dims)`` — random array with ``Float64`` uniformly distributed
-    values in [0,1)
-13. ``randf(dims)`` — random array with ``Float32`` uniformly
-    distributed values in [0,1)
-14. ``randn(dims)`` — random array with ``Float64`` normally distributed
-    random values with a mean of 0 and standard deviation of 1
-15. ``eye(n)`` — n-by-n identity matrix
-16. ``eye(m, n)`` — m-by-n identity matrix
-17. ``linspace(start, stop, n)`` — a vector of ``n`` linearly-spaced
-    elements from ``start`` to ``stop``.
-18. ``fill!(A, x)`` — fill the array ``A`` with value ``x``
+3.  ``zeros(type, dims...)`` — array de tipo especificado inicializado a cero
+4.  ``ones(type, dims...)`` — array de tipo especificado inicializado a unos
+5.  ``trues(dims...)`` — array ``Bool`` con valores a ``true``
+6.  ``falses(dims...)`` — array ``Bool`` con valores a ``false``
+7.  ``reshape(A, dims...)`` — array con los mismos datos que el pasado como argumento,
+    pero con diferentes dimensiones
+8.  ``copy(A)``  — copia ``A``
+9.  ``deepcopy(A)`` — copia ``A``, copiando sus elementos recursivamente
+10. ``similar(A, element_type, dims...)`` — array sin inicializar del mismo tipo 
+    que el pasado (denso, disperso, etc.), pero con el tipo de elementos y dimensiones
+    especificadas. El segundo y tercer argumento son opcionales, por defecto (si se omiten)
+    asigna el tipo de elemento y dimensiones de ``A``.
+11. ``reinterpret(type, A)`` — array con los mismos datos binarios que array pasado como argumento, 
+    pero con el tipo de elemento especificado.
+12. ``rand(dims)`` — array de aleatorios ``Float64`` uniformemente distribuidos en el rango [0,1)
+13. ``randf(dims)`` — array de aleatorios ``Float32`` uniformemente distribuidos en el rango [0,1)
+14. ``randn(dims)`` — array de aleatorios ``Float64`` distribuidos mediante una normal con media 0 y 
+    desviación estándar de 1
+15. ``eye(n)`` — matriz identidad de tamaño nxn
+16. ``eye(m, n)`` — matriz identidad de tamaño mxn
+17. ``linspace(start, stop, n)`` — vector de ``n`` elementos linealmente espaciados desde ``start`` a ``stop``.
+18. ``fill!(A, x)`` — llena el array ``A`` con el valor ``x``
 
-The last function, ``fill!``, is different in that it modifies an
-existing array instead of constructing a new one. As a convention,
-functions with this property have names ending with an exclamation
-point. These functions are sometimes called "mutating" functions, or
-"in-place" functions.
+La última función, ``fill!``, es diferente en tanto que modifica un 
+array existente en lugar de construir uno nuevo. Como convención, 
+las funciones con esta propiedad tienen identificadores con un signo 
+de exclamación como sufijo. Estas funciones a veces son denominadas 
+funciones "modificadoras" o "in-place".
+
 
 Comprehensions
 --------------
