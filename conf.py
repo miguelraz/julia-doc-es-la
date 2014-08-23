@@ -107,7 +107,7 @@ html_theme = 'julia'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['_themes']
+html_theme_path = [juliadoc.get_theme_dir()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -139,11 +139,8 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-html_sidebars = {
-    '**': ['localtoc.html', 'relations.html', 'searchbox.html'],
-    'index': [],
-    'search': [],
-}
+html_sidebars = juliadoc.default_sidebars()
+html_sidebars['index'].insert(0, 'sidebarintro.html')
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
