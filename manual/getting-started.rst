@@ -89,23 +89,24 @@ Há várias maneiras de chamar Julia e passar opções, semelhantes
      -h --help                Print this message
 
 
-Tutoriais
+Tutorial
 ---------
 
-Alguns guias passo-a-passo estão disponíveis online:
+Algunas guias paso a paso están disponibles online:
 
-- `Começando com Julia para usuários de MATLAB <http://www.ime.unicamp.br/~ra092767/tutoriais/julia/>`_
-- `Forio Julia Tutorials (em inglês) <http://forio.com/julia/tutorials-list>`_
-- `Tutorial for Homer Reid's numerical analysis class (em inglês) <http://homerreid.ath.cx/teaching/18.330/JuliaProgramming.shtml#SimplePrograms>`_
+- `Comenzando con Julia para usuarios de MATLAB <http://www.ime.unicamp.br/~ra092767/tutoriais/julia/>`_
+- `Foro Julia Tutorials (en inglés) <http://forio.com/julia/tutorials-list>`_
+- `Tutorial para Homer Reid's numerical analysis class (en inglés) <http://homerreid.ath.cx/teaching/18.330/JuliaProgramming.shtml#SimplePrograms>`_
 
-Diferenças nótáveis em relação ao MATLAB
-----------------------------------------
+Diferencias notables en relación al MATLAB
+------------------------------------------
 
-Usuários de MATLAB podem achar a sintaxe de Julia familar, porém Julia
-não é de maneira alguma um clone de MATLAB: há grandes diferenças
-sintáticas e funcionais. Apresentadas a seguir estão algumas 
-importantes ressalvas que podem confundir usuários de Julia 
-acostumados com MATLAB:
+Usuarios de MATLAB pueden encontrar una sintaxis familiar en Julia, pero 
+no es de ninguna manera un clon de MATLAB: hay grandes diferencias
+sintácticas y funcionales. 
+sintáticas e funcionais. A continuación se presentan algunas
+advertencias importantes que puedan confundir a los usuarios Julia
+acostumbrados con MATLAB:
 
 -  *Arrays* são indexados com colchetes, ``A[i,j]``.
 -  A unidade imaginária ``sqrt(-1)`` é representada em Julia por
