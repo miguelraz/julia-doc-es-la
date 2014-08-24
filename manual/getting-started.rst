@@ -41,17 +41,17 @@ de la última expresión calculada, después de haber sido mostrado o no.
 Para calcular expresiones escritas en un archivo ``file.jl``, luego digite
 ``include("file.jl")``.
 
-Para rodar código em um arquivo de maneira não-interativa, você pode
-passar o nome do arquivo como o primeiro argumento na chamada de Julia::
+Para rodar código en un archivo de manera no-interactiva, ustede puede
+pasar el nombre del archivo como el primer argumento en la llamada de Julia::
 
     $ julia script.jl arg1 arg2...
 
-Como mostra o exemplo, os argumentos da linha de comando subsequentes
-são tomados como argumentos para o programa ``script.jl``, passados na
-constante global ``ARGS``. ``ARGS`` é também definida quando o código
-do *script* é dado usando a opção da linha de comando ``-e`` (veja a 
-saída de ajuda de ``julia`` abaixo). Por exemplo, para apenas imprimir
-os argumentos dados a um *script*, você pode fazer::
+Como muestra el ejemplo, los argumentos de la línea de comando subsequentes
+son tomados como argumentos para el programa ``script.jl``, pasado en la
+constante global ``ARGS``. ``ARGS`` es también definida cuando el código
+del *script* es dado usando la opción de la linea de comando ``-e`` (vea la 
+salida de ayuda de ``julia`` abajo). Por ejemplo, para apenas imprimir
+los argumentos dados a un *script*, ustedes puede hacer::
 
     $ julia -e 'for x in ARGS; println(x); end' foo bar
     foo
