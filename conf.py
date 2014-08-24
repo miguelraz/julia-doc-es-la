@@ -31,7 +31,6 @@ extensions = ['sphinx.ext.mathjax',
               'juliadoc.jldoctest',
               'juliadoc.jlhelp']
 
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -47,7 +46,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'Julia Language'
 AUTHORS = u"Jeff Bezanson, Stefan Karpinski, Viral Shah, Alan Edelman, et al."
-copyright = u'2012-2014, '+AUTHORS
+copyright = u'2012-2013, '+AUTHORS
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
