@@ -154,12 +154,11 @@ acostumbrados con MATLAB:
 -  A função ``svd`` de Julia retorna os valores singulares como um
    vetor, e não como uma matriz diagonal.
 
-Diferenças notáveis em relação a R
-----------------------------------
-
-Um dos objetivos de Julia é providenciar uma linguagem eficiente para
-análise de dados e programação estatística. Para usuários de Julia 
-vindos de R, estas são algumas diferenças importantes:
+Diferencias notables en relación al R
+--------------------------------------
+Uno de los objetivos de Julia es proporcionar un lenguaje eficaz para 
+el análisis de datos y programación estadística. Para los usuarios de Julia 
+procedentes R, estas son algunas diferencias importantes:
 
 - Julia usa ``=`` para atribuição. Julia não provê nenhum outro 
   operador alternativo, como ``<-`` ou ``<-``.
@@ -217,22 +216,22 @@ vindos de R, estas são algumas diferenças importantes:
   mais eficiente.
 - Concatenação de vetores e matrizes é feita usando ``hcat`` e ``vcat``,
   não ``c``, ``rbind`` e ``cbind``.
-- Um objeto ``Range`` ``a:b`` em Julia não é uma forma abreviada de um
-  vetor como em R, mas sim um tipo especializado de objeto que é 
-  utilizado para iteração sem muito gasto de memória. Para um converter
-  um ``Range`` em um vetor, você precisa cercá-lo por colchetes: ``[a:b]``.
-- Julia tem várias funções que podem alterar seus argumentos. For 
-  exemplo, há tanto ``sort(v)`` quanto ``sort!(v)``.
-- Em R, eficiência requer vetorização. Em Julia, quase o contrário é
-  verdadeiro: o código mais eficiente é frequentemente o desvetorizado.
-- Diferentemente de R, não há avaliação preguiçosa [#Del-pt]_ [#Del-en]_
-  em Julia. Para a maioria dos usuários, isso significa que há poucas
-  expressões ou nomes de coluna sem aspas.
-- Julia não possui tipo ``NULL``.
-- Não há equivalente do ``assign`` ou ``get`` de R em Julia.
+- Un objeto ``Range`` ``a:b`` en Julia no es una forma abreviada de un
+  vector como en R, pero si un tipo especializado de objeto que es
+  utilizado para iteración sin tener que gastar una gran cantidad de memoria. Para convertir
+  un ``Range`` en un vector, es necesario rodearlo con corchetes: ``[a:b]``.
+- Julia tiene varias funciones que pueden modificar sus argumentos. Por 
+  ejemplo, hay tanto ``sort(v)`` como ``sort!(v)``.
+- En R, eficiencia requiere vectorización. En Julia, casi lo contrario es
+  cierto: el código mas eficiente es a menudo desvetorizado.
+- A diferencia de R, no hay una evaluación perezosa [#Del-pt]_ [#Del-en]_
+  en Julia. Para la mayoría de los usuarios, ello  significa que hay pocas
+  expresiones o nombres de columna sin las comillas..
+- Julia no posee un tipo ``NULL``.
+- No hay un equivalente de ``assign`` o ``get`` de R en Julia.
 
 
-.. rubric:: Notas de rodapé
+.. rubric:: Notas al pie
 
 .. [#REPL-en] http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 .. [#Del-pt] http://pt.wikipedia.org/wiki/Avalia%C3%A7%C3%A3o_pregui%C3%A7osa
