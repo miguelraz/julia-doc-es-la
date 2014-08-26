@@ -108,29 +108,29 @@ sintáticas e funcionais. A continuación se presentan algunas
 advertencias importantes que puedan confundir a los usuarios Julia
 acostumbrados con MATLAB:
 
--  *Arrays* são indexados com colchetes, ``A[i,j]``.
--  A unidade imaginária ``sqrt(-1)`` é representada em Julia por
+-  *Arrays* son indexados con corchetes, ``A[i,j]``.
+-  La unidad imaginaria ``sqrt(-1)`` es representada en Julia por
    ``im``.
--  Múltiplos valores são retornados e atribuídos com parênteses,
+-  Múltipless valores son devueltos y asignados con paréntesis,
    ``return (a, b)`` e ``(a, b) = f(x)``.
--  Valores são passados e atribuídos por referência. Se uma função 
-   modifica um *array*, as mudanças serão visíveis para quem chamou.
--  Julia tem *arrays* unidimensionais. Vetores-coluna são de tamanho 
-   ``N``, não ``Nx1``. Por exemplo, ``rand(N)`` cria um array 
+-  Los valores se transmiten y se asignan por referencia. Si una función 
+   modifica un *array*, los cambios serán visibles para quien llamó.
+-  Julia tiene *arrays* unidimensionales. Vectores-columna son de tamaño 
+   ``N``, não ``Nx1``. Por ejemplo, ``rand(N)`` crea un array 
    unidimensional.
--  Concatenar escalares e *arrays* com a sintaxe ``[x,y,z]`` concatena
-   na primeira dimensão ("verticalmente"). Para a segunda dimensão,
-   ("horizontalmente"), use espaços, como em ``[x y z]``. Para 
-   construir matrizes em blocos (concatenando nas duas primeiras 
-   dimensões), é usada a sintaxe ``[a b; c d]`` para evitar confusão.
--  Dois-pontos ``a:b`` e ``a:b:c`` constroem objetos ``Range``. Para 
-   construir um vetor completo, use ``linspace``, ou "concatene" o
-   intervalo colocando-o em colchetes, ``[a:b]``.
--  Funções retornam valores usando a palavra-chave ``return``, ao 
-   invés de por citações a seus nomes na definição da função (veja
-   :ref:`man-return-keyword` para mais detalhes).
--  Um arquivo pode conter um número qualquer de funções, e todas as 
-   definições vão ser visíveis de fora quando o arquivo for carregado.
+-  Concatenar escalares y *arrays* con una sintaxis ``[x,y,z]`` concatena
+   la primera dimensión ("verticalmente"). Para la segunda dimensión,
+   ("horizontalmente"), use espacios, como en ``[x y z]``. Para 
+   construir matrices en bloques (concatenando las dos primeras
+   dimensiones), es usada una sintaxis ``[a b; c d]`` para evitar confusión.
+-  Dos-puntos ``a:b`` e ``a:b:c`` construyen objetos ``Range``. Para 
+   construir un vector completo, use ``linspace``, o "concatene" o
+   en el intervalo colocando en corchetes, ``[a:b]``.
+-  Funciiones devuelven valores usando a palavra-clave ``return``, en  
+   vez de colocar citas a sus nombres en la definición de la función (vea
+   :ref:`man-return-keyword` para mas detalles).
+-  Un archivo puede almacenar un número cualquiera de funciones, y todas las 
+   definiciones van a ser visibles para fuera cuando el archivo fuera cargado.
 -  Reduções como ``sum``, ``prod``, e ``max`` são feitas sobre cada 
    elemento de um *array* quando chamadas com um único argumento, como
    em ``sum(A)``.
@@ -149,7 +149,7 @@ acostumbrados con MATLAB:
 -  Se ``A`` e ``B`` são *arrays*, ``A == B`` não retorna um *array* de
    booleanos. Use ``A .== B`` no lugar. O mesmo vale para outros 
    operaores booleanos, ``<``, ``>``, ``!=``, etc.
--  Os elementos de uma coleção podem ser passados como argumentos para
+-  Los elementos de uma colección pueden ser passados como argumentos para
    uma função usando ``...``, como em ``xs=[1,2]; f(xs...)``.
 -  A função ``svd`` de Julia retorna os valores singulares como um
    vetor, e não como uma matriz diagonal.
