@@ -131,28 +131,28 @@ acostumbrados con MATLAB:
    :ref:`man-return-keyword` para mas detalles).
 -  Un archivo puede almacenar un número cualquiera de funciones, y todas las 
    definiciones van a ser visibles para fuera cuando el archivo fuera cargado.
--  Reduções como ``sum``, ``prod``, e ``max`` são feitas sobre cada 
-   elemento de um *array* quando chamadas com um único argumento, como
-   em ``sum(A)``.
--  Funções como ``sort`` que operam por padrão em colunas
-   (``sort(A)`` é equivalente a ``sort(A,1)``) não possuem 
-   comportamento especial para *arrays* 1xN; o argumento é retornado
-   inalterado, já que a operação feita foi ``sort(A,1)``. Para ordenar
-   uma matriz 1xN como um vetor, use ``sort(A,2)``.
--  Parênteses devem ser usados para chamar uma função com zero 
-   argumentos, como em``tic()`` and ``toc()``.
--  Não use ponto-e-vírgula para encerrar declarações. Os resultados 
-   de declarações não são automaticamente impressos (exceto no prompt 
-   interativo), e linhas de código não precisam terminar com 
-   ponto-e-vírgula. A função ``println`` pode ser usada para imprimir 
-   um valor seguido de uma nova linha.
+-  Reducciones como ``sum``, ``prod``, e ``max`` son hechas sobre cada 
+   elemento de un *array* cuando son llamadas con un único argumento, como
+   en ``sum(A)``.
+-  Funciones como ``sort`` que operan de forma estándar  en columnas
+   (``sort(A)`` es equivalente a ``sort(A,1)``) no poseen un
+   comportamiento especial para *arrays* 1xN; el argumento es retornado
+   inalterado,  ya que la operación  hecha fue ``sort(A,1)``. Para ordenar
+   una matriz 1xN como um vetor, use ``sort(A,2)``.
+-  Paréntesis deben  ser usados para chamar una función  con cero 
+   argumentos, como en``tic()`` y ``toc()``.
+-  No use ponto-e-vírgula para cerrar declaraciones. Los resultados 
+   de declaraciones no son automaticamente  impresos (exceto no prompt 
+   interativo), y lineas de código no precisan terminar con
+   ponto-y-vírgula. A función  ``println`` puede ser usada para imprimir 
+   un valor seguido de uma nueva línea.
 -  Se ``A`` e ``B`` são *arrays*, ``A == B`` não retorna um *array* de
    booleanos. Use ``A .== B`` no lugar. O mesmo vale para outros 
    operaores booleanos, ``<``, ``>``, ``!=``, etc.
 -  Los elementos de uma colección pueden ser passados como argumentos para
    uma função usando ``...``, como em ``xs=[1,2]; f(xs...)``.
--  A função ``svd`` de Julia retorna os valores singulares como um
-   vetor, e não como uma matriz diagonal.
+-  La función  ``svd`` de Julia retorna los valores singulares como un
+   vector, y no como uma matriz diagonal.
 
 Diferencias notables en relación al R
 --------------------------------------
