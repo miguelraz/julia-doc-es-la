@@ -64,8 +64,8 @@ Ou pode colocar esse código em um *script* e rodá-lo::
     foo
     bar
 
-Há várias maneiras de chamar Julia e passar opções, semelhantes
-àquelas disponívels para os programas ``perl`` e ``ruby``::
+Hay varias formas de llamar a Julia e pasar opciones, semejantes
+a aquellas disponibles para los programas ``perl`` y ``ruby``::
 
     julia [options] [program] [args...]
      -v --version             Display version information
@@ -160,46 +160,46 @@ Uno de los objetivos de Julia es proporcionar un lenguaje eficaz para
 el análisis de datos y programación estadística. Para los usuarios de Julia 
 procedentes R, estas son algunas diferencias importantes:
 
-- Julia usa ``=`` para atribuição. Julia não provê nenhum outro 
-  operador alternativo, como ``<-`` ou ``<-``.
-- Julia constrói vetores usando colchetes. O ``[1, 2, 3]`` de Julia é
-  o equivalente do ``c(1, 2, 3)`` de R.
-- As operações matriciais de Julia são mais parecidas com a notação
-  matemática tradicional do que as de R. Se ``A`` e ``B`` são matrizes,
-  então ``A * B`` define a multiplicação de matrizes em Julia 
-  equivalente à ``A %*% B`` de R. Em R, essa notação faria um produto
-  de Hadamard (elemento a elemento). Para obter a multiplicação 
-  elemento a elemento em Julia, você deve escrever ``A .* B``.
-- Julia transpõe matrizes usando o operador ``'``. O ``A'`` em Julia é
-  então equivalente ao ``t(A)`` de R.
-- Julia não requer parênteses ao escrever condições ``if`` ou loops 
-  ``for``: use ``for i in [1, 2, 3]`` no lugar de ``for (i in c(1, 2, 3))``
-  e ``if i == 1`` no lugar de ``if (i == 1)``.
-- Julia não trata os números ``0`` e ``1`` como booleanos. Você não
-  pode escrever ``if (1)`` em Julia, porque condições ``if` só aceitam
-  booleanos. No lugar, escreva ``if true``.
-- Julia não provê funções ``nrow`` e ``ncol``. Use ``size(M, 1)`` no 
-  lugar de ``nrow(M)`` e ``size(M, 2)`` no lugar de ``ncol(M)``.
-- A SVD de Julia não é reduzida por padrão, diferentemente de R. Para
-  obter resultados semelhantes aos de R, você deverá chamar ``svd(X, true)``
-  em uma matrix ``X``.
-- Julia é uma linguagem muito cautelosa em distinguir escalares, 
-  vetores e matrizes. Em R, ``1`` e ``c(1)`` são iguais. Em Julia, 
-  eles não podem ser usados um no lugar do outro. Uma consequência
-  potencialmente confusa é que ``x' * y`` para vetores ``x`` e ``y``
-  é um vetor de um elemento, e não um escalar. Para obter um escalar,
-  use ``dot(x, y)``.
-- As funções ``diag()`` e ``diagm()`` de Julia não são parecidas com 
-  as de R.
-- Julia não pode atribuir os resultados de chamadas de funções no lado
-  esquerdo de uma operação: você não pode escrever ``diag(M) = ones(n)``
-- Julia desencoraja popular o *namespace* principal com funções. A 
-  maior parte das funcionalidades estatísticas para Julia é encontrada
-  em `pacotes <http://docs.julialang.org/en/latest/packages/packagelist/>`_ 
-  como o `DataFrames` e o `Distributions`.
-	- Funções de distribuições são encontradas no `pacote Distributions <https://github.com/JuliaStats/Distributions.jl>`_
-	- O `pacote DataFrames <https://github.com/HarlanH/DataFrames.jl>`_ provê *data frames*.
-	- Fórmulas para GLM devem ser escapadas: use ``:(y ~ x)`` no lugar de ``y ~ x``.
+- Julia usa ``=`` para atrbuit. Julia proporciona ningún otro
+  operador alternativo, como ``<-`` o ``<-``.
+- Julia construye vectores usando corchetes. O ``[1, 2, 3]`` de Julia es
+  equivalente a ``c(1, 2, 3)`` del R.
+- Las operaciones con matrices en Julia son más afines a la notación
+  matemática tradicional que los del R. Si ``A`` e ``B`` son matrices,
+  entonces ``A * B`` define una multiplicación de matrices en Julia 
+  equivalente a ``A %*% B`` de R. En R, esta notación haría un producto
+  de Hadamard (elemento a elemento). Para la multiplicación
+  elemento a elemento em Julia, usted debe escribir ``A .* B``.
+- Julia transpone matrices utilizando el operador ``'``. O ``A'`` en Julia es
+  entonces equivalente a ``t(A)`` del R.
+- Julia no requiere paréntesis al escribir condiciones ``if`` o loops 
+  ``for``: use ``for i in [1, 2, 3]`` en lugar de ``for (i in c(1, 2, 3))``
+  y ``if i == 1`` en lugar de ``if (i == 1)``.
+- Julia no trata los números ``0`` e ``1`` como booleanos. No
+  puede escribir ``if (1)`` en Julia, porque condiciones ``if` solo aceptan
+  booleanos. En lugar, escriba ``if true``.
+- Julia no proporciona funciones ``nrow`` y ``ncol``. Usar ``size(M, 1)`` en 
+  lugar de ``nrow(M)`` e ``size(M, 2)`` en lugar de ``ncol(M)``.
+- La SVD de Julia no se reduce de forma predeterminada, a diferencia deR. Para
+  obtener resultados similares a los de R, debe llamar a ``svd(X, true)``
+  en una matriz ``X``.
+- Julia es un lenguaje muy prudente en distinguir escalar, 
+  vectores y matrices. En R, ``1`` y ``c(1)`` son iguales. En Julia, 
+  no se pueden utilizar en el lugar de otro. Una consecuencia
+  potencialmente confuso es que ``x' * y`` para vectores ``x`` y ``y``
+  es un vector de un elemento, y no un escalar. Para obtener un escalar,
+  puede usar ``dot(x, y)``.
+- Las funciones ``diag()`` e ``diagm()`` de Julia no son parecidas con 
+  las del R.
+- Julia no puede asignar los resultados de las llamadas de función en el lado
+  izquierdo de una operación: no puede escribir ``diag(M) = ones(n)``
+- Julia desincentiva al popular *namespace* principal con funciones. La 
+  mayor parte de las funcionalidades estadísticas para Julia es encontrada
+  en `paquetes <http://docs.julialang.org/en/latest/packages/packagelist/>`_ 
+  como el `DataFrames` y `Distributions`.
+	- Funciones de distribuciones son encontradas en el `paquete Distributions <https://github.com/JuliaStats/Distributions.jl>`_
+	- El `paquete DataFrames <https://github.com/HarlanH/DataFrames.jl>`_ pruebe *data frames*.
+	- Fórmulas para GLM deben ser escapadas: use ``:(y ~ x)`` en lugar de ``y ~ x``.
 - Julia provê enuplas e tabelas de espalhamento reais, mas as listas
   de R. Quando precisar retornar múltiplos itens, você tipicamente 
   deverá utilizar uma tupla: ao invés de ``list(a = 1, b = 2)``, use 
