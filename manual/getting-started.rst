@@ -209,10 +209,10 @@ procedentes R, estas son algunas diferencias importantes:
   ou S4 de R. O sistema de *multiple dispatch* de Julia significa que
   ``table(x::TypeA)`` e ``table(x::TypeB)`` agem como ``table.TypeA(x)``
   e ``table.TypeB(x)`` em R.
-- Em Julia, valores são passados e atribuídos por referência. Se uma
-  função modifica um *array*, as mudanças serão visíveis no lugar de
-  chamada.  Esse comportamento é bem diferente do de R, e permite que
-  novas funções operem em grandes estruturas de dados de maneira muito
+- En Julia, valores son passados y atribuídos por referencia. Se una
+  función  modifica un *array*, las modificaciones  serán  visibles en lugar de la
+  llamada.  Ese comportamiento es bien diferente en el R, e permite que
+  nuevas  funciones operen en grandes estruturas de dados de maneira muito
   mais eficiente.
 - Concatenação de vetores e matrizes é feita usando ``hcat`` e ``vcat``,
   não ``c``, ``rbind`` e ``cbind``.
