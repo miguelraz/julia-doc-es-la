@@ -87,12 +87,12 @@ de exclamación como sufijo. Estas funciones a veces son denominadas
 funciones "modificadoras" o "in-place".
 
 
-Comprehensions
---------------
+Comprensiones
+-------------
 
-Comprehensions provide a general and powerful way to construct arrays.
-Comprehension syntax is similar to set construction notation in
-mathematics::
+Comprensiones proporcionan una manera general y de gran alcance para la construcción de matrices.
+La sintaxis de comprensión es similar a establecer la notación de la construcción en 
+matemáticas::
 
     A = [ F(x,y,...) for x=rx, y=ry, ... ]
 
