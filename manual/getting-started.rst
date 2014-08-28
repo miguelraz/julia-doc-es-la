@@ -141,10 +141,10 @@ acostumbrados con MATLAB:
    una matriz 1xN como um vetor, use ``sort(A,2)``.
 -  Paréntesis deben  ser usados para chamar una función  con cero 
    argumentos, como en``tic()`` y ``toc()``.
--  No use ponto-e-vírgula para cerrar declaraciones. Los resultados 
+-  No use punto y coma para cerrar declaraciones. Los resultados 
    de declaraciones no son automaticamente  impresos (exceto no prompt 
    interativo), y lineas de código no precisan terminar con
-   ponto-y-vírgula. A función  ``println`` puede ser usada para imprimir 
+   punto y coma. A función  ``println`` puede ser usada para imprimir 
    un valor seguido de uma nueva línea.
 -  Se ``A`` e ``B`` são *arrays*, ``A == B`` não retorna um *array* de
    booleanos. Use ``A .== B`` no lugar. O mesmo vale para outros 
@@ -200,22 +200,22 @@ procedentes R, estas son algunas diferencias importantes:
 	- Funciones de distribuciones son encontradas en el `paquete Distributions <https://github.com/JuliaStats/Distributions.jl>`_
 	- El `paquete DataFrames <https://github.com/HarlanH/DataFrames.jl>`_ pruebe *data frames*.
 	- Fórmulas para GLM deben ser escapadas: use ``:(y ~ x)`` en lugar de ``y ~ x``.
-- Julia provê enuplas e tabelas de espalhamento reais, mas as listas
-  de R. Quando precisar retornar múltiplos itens, você tipicamente 
-  deverá utilizar uma tupla: ao invés de ``list(a = 1, b = 2)``, use 
+- Julia proporciona tuplas y tablas de dispersión reales, pero las listas
+  de R. Cuando tenga que devolver varios elementos, típicamente
+  debe usar una tupla: en lugar de ``list(a = 1, b = 2)``, use 
   ``(1, 2)``. 
-- Julia encoraja a todos usuários escreverem seus próprios tipos. Os
-  tipos de Julia são bem mais fáceis de se usar do que os objetos S3
-  ou S4 de R. O sistema de *multiple dispatch* de Julia significa que
-  ``table(x::TypeA)`` e ``table(x::TypeB)`` agem como ``table.TypeA(x)``
-  e ``table.TypeB(x)`` em R.
-- En Julia, valores son passados y atribuídos por referencia. Se una
+- Julia invita a los usuarios a escribir sus propios tipos. Los
+  tipos de Julia son bien mas fáciles de usar de que los objetos S3
+  o S4 de R. El sistema de *multiple dispatch* de Julia significa que
+  ``table(x::TypeA)`` y ``table(x::TypeB)`` actúan como ``table.TypeA(x)``
+  y ``table.TypeB(x)`` en R.
+- En Julia, valores son pasados y atribuídos por referencia. Se una
   función  modifica un *array*, las modificaciones  serán  visibles en lugar de la
-  llamada.  Ese comportamiento es bien diferente en el R, e permite que
-  nuevas  funciones operen en grandes estruturas de dados de maneira muito
-  mais eficiente.
-- Concatenação de vetores e matrizes é feita usando ``hcat`` e ``vcat``,
-  não ``c``, ``rbind`` e ``cbind``.
+  llamada.  Ese comportamiento es bien diferente en el R, y permite que
+  nuevas  funciones operen en grandes estructuras de datos de manera mucho
+  mas eficiente.
+- Concatenación de vectores y matrices se realiza utilizando ``hcat`` y ``vcat``,
+  no ``c``, ``rbind`` y ``cbind``.
 - Un objeto ``Range`` ``a:b`` en Julia no es una forma abreviada de un
   vector como en R, pero si un tipo especializado de objeto que es
   utilizado para iteración sin tener que gastar una gran cantidad de memoria. Para convertir
