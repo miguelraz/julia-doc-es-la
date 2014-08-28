@@ -4,8 +4,8 @@
  Comenzando  
 ***********
 
-La instalación de Julia es directa, sea  utilizando arquivos binários pre-compilados, sea
-compilando el código-fuente. Baje e instale Julia siguiendo las 
+La instalación de Julia es directa, sea  utilizando archivos binários pre-compilados, sea
+compilando el código-fuente. Descargue e instale Julia siguiendo las 
 instrucciones (em inglés) en `http://julialang.org/downloads/ <http://julialang.org/downloads/>`_.
 
 La manera más facil de aprender y experimentar con Julia es iniciando una sesión interactiva (também
@@ -34,15 +34,15 @@ Julia en modo interativo, ``julia`` muestra un *banner* y espera al
 usuário que digite un comando. Una vez que el usuário digitó el comando,
 como `1 + 2`, y presione *enter*, la sesión interativa calcula la 
 expresión y muestra el resultado. Si una expresión es insertada en una 
-sesión interativa con un punto-y-vírgula al final, su resultado será
+sesión interativa con un punto y coma al final, su resultado será
 calculado, pero no será mostrado. La varible ``ans`` almacena el resultado 
 de la última expresión calculada, después de haber sido mostrado o no.
 
 Para calcular expresiones escritas en un archivo ``file.jl``, luego digite
 ``include("file.jl")``.
 
-Para rodar código en un archivo de manera no-interactiva, ustede puede
-pasar el nombre del archivo como el primer argumento en la llamada de Julia::
+Para rodar código en un archivo de manera no-interactiva, puede pasar
+el nombre del archivo como el primer argumento en la llamada de Julia::
 
     $ julia script.jl arg1 arg2...
 
@@ -57,24 +57,24 @@ los argumentos dados a un *script*, ustedes puede hacer::
     foo
     bar
 
-Ou pode colocar esse código em um *script* e rodá-lo::
+O puede colocar dicho código en un *script* y ejecutarlo::
 
     $ echo 'for x in ARGS; println(x); end' > script.jl
     $ julia script.jl foo bar
     foo
     bar
 
-Hay varias formas de llamar a Julia e pasar opciones, semejantes
+Hay varias formas de llamar a Julia y pasar opciones, semejantes
 a aquellas disponibles para los programas ``perl`` y ``ruby``::
 
     julia [options] [program] [args...]
-     -v --version             Display version information
+     -v --version             Muestra información de la versión
      -q --quiet               Quiet startup without banner
      -H --home=<dir>          Load files relative to <dir>
      -T --tab=<size>          Set REPL tab width to <size>
 
-     -e --eval=<expr>         Evaluate <expr>
-     -E --print=<expr>        Evaluate and show <expr>
+     -e --eval=<expr>         Evaluar <expr>
+     -E --print=<expr>        Evaluar y mostrar <expr>
      -P --post-boot=<expr>    Evaluate <expr> right after boot
      -L --load=file           Load <file> right after boot
      -J --sysimage=file       Start up with the given system image file
@@ -86,7 +86,7 @@ a aquellas disponibles para los programas ``perl`` y ``ruby``::
      -f --no-startup          Don't load ~/.juliarc.jl
      -F                       Load ~/.juliarc.jl, then handle remaining inputs
 
-     -h --help                Print this message
+     -h --help                Imprimir este mensaje
 
 
 Tutorial
@@ -103,15 +103,14 @@ Diferencias notables en relación al MATLAB
 
 Usuarios de MATLAB pueden encontrar una sintaxis familiar en Julia, pero 
 no es de ninguna manera un clon de MATLAB: hay grandes diferencias
-sintácticas y funcionales. 
-sintáticas e funcionais. A continuación se presentan algunas
+sintácticas y funcionales. A continuación se presentan algunas
 advertencias importantes que puedan confundir a los usuarios Julia
 acostumbrados con MATLAB:
 
 -  *Arrays* son indexados con corchetes, ``A[i,j]``.
 -  La unidad imaginaria ``sqrt(-1)`` es representada en Julia por
    ``im``.
--  Múltipless valores son devueltos y asignados con paréntesis,
+-  Múltiples valores son devueltos y asignados con paréntesis,
    ``return (a, b)`` e ``(a, b) = f(x)``.
 -  Los valores se transmiten y se asignan por referencia. Si una función 
    modifica un *array*, los cambios serán visibles para quien llamó.
@@ -126,7 +125,7 @@ acostumbrados con MATLAB:
 -  Dos-puntos ``a:b`` e ``a:b:c`` construyen objetos ``Range``. Para 
    construir un vector completo, use ``linspace``, o "concatene" o
    en el intervalo colocando en corchetes, ``[a:b]``.
--  Funciiones devuelven valores usando a palavra-clave ``return``, en  
+-  Funciones devuelven valores usando a palavra-clave ``return``, en  
    vez de colocar citas a sus nombres en la definición de la función (vea
    :ref:`man-return-keyword` para mas detalles).
 -  Un archivo puede almacenar un número cualquiera de funciones, y todas las 
@@ -134,23 +133,23 @@ acostumbrados con MATLAB:
 -  Reducciones como ``sum``, ``prod``, e ``max`` son hechas sobre cada 
    elemento de un *array* cuando son llamadas con un único argumento, como
    en ``sum(A)``.
--  Funciones como ``sort`` que operan de forma estándar  en columnas
+-  Funciones como ``sort`` que operan de forma estándar en columnas
    (``sort(A)`` es equivalente a ``sort(A,1)``) no poseen un
    comportamiento especial para *arrays* 1xN; el argumento es retornado
    inalterado,  ya que la operación  hecha fue ``sort(A,1)``. Para ordenar
-   una matriz 1xN como um vetor, use ``sort(A,2)``.
--  Paréntesis deben  ser usados para chamar una función  con cero 
+   una matriz 1xN como un vector, use ``sort(A,2)``.
+-  Paréntesis deben  ser usados para llamar una función  con cero 
    argumentos, como en``tic()`` y ``toc()``.
 -  No use punto y coma para cerrar declaraciones. Los resultados 
-   de declaraciones no son automaticamente  impresos (exceto no prompt 
+   de declaraciones no son automáticamente  impresos (exceto no prompt 
    interativo), y lineas de código no precisan terminar con
-   punto y coma. A función  ``println`` puede ser usada para imprimir 
-   un valor seguido de uma nueva línea.
--  Se ``A`` e ``B`` são *arrays*, ``A == B`` não retorna um *array* de
-   booleanos. Use ``A .== B`` no lugar. O mesmo vale para outros 
-   operaores booleanos, ``<``, ``>``, ``!=``, etc.
+   punto y coma. A función ``println`` puede ser usada para imprimir 
+   un valor seguido de una nueva línea.
+-  Si ``A`` e ``B`` são *arrays*, ``A == B`` no devuelve un *array* de
+   booleanos. Use ``A .== B``. Lo mismo es válido para otros
+   operadores booleanos, ``<``, ``>``, ``!=``, etc.
 -  Los elementos de uma colección pueden ser passados como argumentos para
-   uma função usando ``...``, como em ``xs=[1,2]; f(xs...)``.
+   una función usando ``...``, como en ``xs=[1,2]; f(xs...)``.
 -  La función  ``svd`` de Julia retorna los valores singulares como un
    vector, y no como uma matriz diagonal.
 
@@ -170,7 +169,7 @@ procedentes R, estas son algunas diferencias importantes:
   equivalente a ``A %*% B`` de R. En R, esta notación haría un producto
   de Hadamard (elemento a elemento). Para la multiplicación
   elemento a elemento em Julia, usted debe escribir ``A .* B``.
-- Julia transpone matrices utilizando el operador ``'``. O ``A'`` en Julia es
+- Julia transpone matrices utilizando el operador ``'``. El ``A'`` en Julia es
   entonces equivalente a ``t(A)`` del R.
 - Julia no requiere paréntesis al escribir condiciones ``if`` o loops 
   ``for``: use ``for i in [1, 2, 3]`` en lugar de ``for (i in c(1, 2, 3))``
@@ -189,7 +188,7 @@ procedentes R, estas son algunas diferencias importantes:
   potencialmente confuso es que ``x' * y`` para vectores ``x`` y ``y``
   es un vector de un elemento, y no un escalar. Para obtener un escalar,
   puede usar ``dot(x, y)``.
-- Las funciones ``diag()`` e ``diagm()`` de Julia no son parecidas con 
+- Las funciones ``diag()`` y ``diagm()`` de Julia no son parecidas con 
   las del R.
 - Julia no puede asignar los resultados de las llamadas de función en el lado
   izquierdo de una operación: no puede escribir ``diag(M) = ones(n)``
