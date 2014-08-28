@@ -96,7 +96,7 @@ matemáticas::
 
     A = [ F(x,y,...) for x=rx, y=ry, ... ]
 
-The meaning of this form is that ``F(x,y,...)`` is evaluated with the
+El significado de esta forma es que  ``F(x,y,...)`` is evaluated with the
 variables ``x``, ``y``, etc. taking on each value in their given list of
 values. Values can be specified as any iterable object, but will
 commonly be ranges like ``1:n`` or ``2:(n-1)``, or explicit arrays of
@@ -105,6 +105,7 @@ dimensions that are the concatenation of the dimensions of the variable
 ranges ``rx``, ``ry``, etc. and each ``F(x,y,...)`` evaluation returns a
 scalar.
 
+El siguiente ejemplo calcula 
 The following example computes a weighted average of the current element
 and its left and right neighbour along a 1-d grid.
 
@@ -152,16 +153,16 @@ array of type ``Any``::
 
 .. _man-array-indexing:
 
-Indexing
+Indexando
 --------
 
 The general syntax for indexing into an n-dimensional array A is::
 
     X = A[I_1, I_2, ..., I_n]
 
-where each I\_k may be:
+Donde cada I\_k puede ser:
 
-1. A scalar value
+1. Un valor escalar
 2. A ``Range`` of the form ``:``, ``a:b``, or ``a:b:c``
 3. An arbitrary integer vector, including the empty vector ``[]``
 4. A boolean vector
