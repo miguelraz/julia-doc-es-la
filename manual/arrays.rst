@@ -105,9 +105,8 @@ dimensions that are the concatenation of the dimensions of the variable
 ranges ``rx``, ``ry``, etc. and each ``F(x,y,...)`` evaluation returns a
 scalar.
 
-El siguiente ejemplo calcula 
-The following example computes a weighted average of the current element
-and its left and right neighbour along a 1-d grid.
+El ejemplo siguiente se calcula una media ponderada del elemento
+actual y su vecino de la izquierda y derecha a lo largo de una cuadrícula 1-d.
 
 ::
 
@@ -194,7 +193,7 @@ Ejemplo::
     6 10
     7 11
 
-Assignment
+Asignación
 ----------
 
 The general syntax for assigning values in an n-dimensional array A is::
@@ -216,7 +215,7 @@ Index assignment syntax is equivalent to a call to ``setindex!``::
 
       A = setindex!(A, X, I_1, I_2, ..., I_n)
 
-Example::
+Ejemplo::
 
     julia> x = reshape(1:9, 3, 3)
     3x3 Int64 Array
@@ -230,8 +229,8 @@ Example::
     2 -1 -1
     3 6 9
 
-Concatenation
--------------
+La concatenación
+----------------
 
 Arrays can be concatenated along any dimension using the following
 syntax:
@@ -248,8 +247,8 @@ Concatenation operators may also be used for concatenating arrays:
 2. ``[A, B, C, ...]`` — calls ``vcat``
 3. ``[A B; C D; ...]`` — calls ``hvcat``
 
-Vectorized Operators and Functions
-----------------------------------
+Operadores y Funciones vectorizadas
+-----------------------------------
 
 The following operators are supported for arrays. In case of binary
 operators, the dot version of the operator should be used when both
@@ -275,8 +274,8 @@ one of the inputs is a scalar.
     ``sqrt``, ``cbrt``, ``erf``, ``erfc``, ``gamma``, ``lgamma``,
     ``real``, ``conj``, ``clamp``
 
-Broadcasting
-------------
+Difundir ampliamente
+---------------------
 
 It is sometimes useful to perform element-by-element binary operations
 on arrays of different sizes, such as adding a vector to each column
@@ -384,16 +383,16 @@ stride parameters.
      -1.175  -0.786311
       0.0    -0.414549
 
-******************
- Sparse Matrices
-******************
+*******************
+ Matrices dispersas
+*******************
 
-`Sparse matrices <http://en.wikipedia.org/wiki/Sparse_matrix>`_ are
-matrices that contain enough zeros that storing them in a special data
-structure leads to savings in space and execution time. Sparse
-matrices may be used when operations on the sparse representation of a
-matrix lead to considerable gains in either time or space when
-compared to performing the same operations on a dense matrix.
+`Matrices disperarsas <http://en.wikipedia.org/wiki/Sparse_matrix>`_ son
+matrices que contienen suficientes ceros que almacenándolos en una estructura de datos 
+especial supone un ahorro de espacio y tiempo de ejecución. Matrices
+dispersas puede utilizarse cuando las operaciones en la representación disperar de una 
+matriz conducen a considerables aumentos en el tiempo o el espacio, en comparación con
+la realización de las mismas operaciones en una matriz densa..
 
 Compressed Sparse Column (CSC) Storage
 --------------------------------------
@@ -424,8 +423,8 @@ beyond the point of insertion have to be moved one place over.
 All operations on sparse matrices are carefully implemented to exploit
 the CSC data structure for performance, and to avoid expensive operations.
 
-Sparse matrix constructors
---------------------------
+Constructores de matrices dispersas
+----------------------------------
 
 The simplest way to create sparse matrices are using functions
 equivalent to the ``zeros`` and ``eye`` functions that Julia provides
@@ -435,10 +434,10 @@ you can use the same names with an ``sp`` prefix:
 ::
 
     julia> spzeros(3,5)
-    3x5 sparse matrix with 0 nonzeros:
+    3x5 matriz dispersa con 0 nonzeros:
 
     julia> speye(3,5)
-    3x5 sparse matrix with 3 nonzeros:
+    3x5 matriz dispersa con 3 nonzeros:
         [1, 1]  =  1.0
         [2, 2]  =  1.0
         [3, 3]  =  1.0
@@ -493,11 +492,11 @@ is sparse.
     julia> issparse(speye(5))
     true
 
-Sparse matrix operations
-------------------------
+Operaciones con una matriz dispersa
+-----------------------------------
 
-Arithmetic operations on sparse matrices also work as they do on dense
-matrices. Indexing of, assignment into, and concatenation of sparse
+Las operaciones aritméticas sobre matrices dispersas también funcionan como lo hacen en 
+matrices densas. Indexing of, assignment into, and concatenation of sparse
 matrices work in the same way as dense matrices. Indexing operations,
 especially assignment, are expensive, when carried out one element at
 a time. In many cases it may be better to convert the sparse matrix
