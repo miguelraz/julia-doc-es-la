@@ -96,14 +96,13 @@ matemáticas::
 
     A = [ F(x,y,...) for x=rx, y=ry, ... ]
 
-El significado de esta forma es que  ``F(x,y,...)`` is evaluated with the
-variables ``x``, ``y``, etc. taking on each value in their given list of
-values. Values can be specified as any iterable object, but will
-commonly be ranges like ``1:n`` or ``2:(n-1)``, or explicit arrays of
-values like ``[1.2, 3.4, 5.7]``. The result is an N-d dense array with
-dimensions that are the concatenation of the dimensions of the variable
-ranges ``rx``, ``ry``, etc. and each ``F(x,y,...)`` evaluation returns a
-scalar.
+El significado de esta forma es que  ``F(x,y,...)`` es evaluado com las 
+variables ``x``, ``y``, etc. tomando en cada valor en su lista de valores.
+Los valores pueden ser especificados como cualquier objeto iterable, pero será
+comúnmente rangos como ``1:n`` o ``2:(n-1)``, o explícitamente arreglos de
+valores como  ``[1.2, 3.4, 5.7]``. EL resultado es u arreglo N-d denso array con
+dimensiones que son la concatenación de las dimensiones de los rangos de variables
+``rx``, ``ry``, etc. y cada  ``F(x,y,...)`` evaluación devuelve un escalar. 
 
 El ejemplo siguiente se calcula una media ponderada del elemento
 actual y su vecino de la izquierda y derecha a lo largo de una cuadrícula 1-d.
@@ -130,7 +129,7 @@ actual y su vecino de la izquierda y derecha a lo largo de una cuadrícula 1-d.
      0.245097
      0.241854
 
-NOTA: In the above example, ``x`` is declared as constant because type
+NOTA: En el ejemplo anterior, ``x`` is declared as constant because type
 inference in Julia does not work as well on non-constant global
 variables.
 
