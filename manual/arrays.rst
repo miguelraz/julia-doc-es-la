@@ -133,15 +133,15 @@ NOTA: En el ejemplo anterior, ``x`` is declared as constant because type
 inference in Julia does not work as well on non-constant global
 variables.
 
-The resulting array type is inferred from the expression; in order to control
-the type explicitly, the type can be prepended to the comprehension. For example,
-in the above example we could have avoided declaring ``x`` as constant, and ensured
-that the result is of type ``Float64`` by writing::
+El tipo de matriz resultante se deduce de la expresión; para controlar 
+el tipo explícitamente, tel tipo se puede anteponer a la comprensión. Por ejemplo,
+en el ejemplo anterior podríamos haber evitado declarar ``x`` como constante, y aseguró 
+que el resultado es de tipo  ``Float64`` por escrito::
 
     Float64[ 0.25*x[i-1] + 0.5*x[i] + 0.25*x[i+1] for i=2:length(x)-1 ]
 
-Using curly brackets instead of square brackets is a shortand notation for an
-array of type ``Any``::
+Usando llaves en lugar de corchetes es una notación abreviada para una matriz 
+de tipo ``Any``::
 
     julia> { i/2 for i = 1:3 }
     3-element Any Array:
@@ -154,27 +154,28 @@ array of type ``Any``::
 Indexando
 --------
 
-The general syntax for indexing into an n-dimensional array A is::
+La sintaxis general para 
+La sintaxis general para la indexación en un arreglo n-dimensional  A es ::
 
     X = A[I_1, I_2, ..., I_n]
 
 Donde cada I\_k puede ser:
 
 1. Un valor escalar
-2. A ``Range`` of the form ``:``, ``a:b``, or ``a:b:c``
-3. An arbitrary integer vector, including the empty vector ``[]``
-4. A boolean vector
+2. Un ``Range`` de la forma ``:``, ``a:b``, o ``a:b:c``
+3. Un vector entero arbitrario, incluyendo el vector vacío `` [] ``
+4. Un vector booleano
 
-The result X generally has dimensions
-``(length(I_1), length(I_2), ..., length(I_n))``, with location
-``(i_1, i_2, ..., i_n)`` of X containing the value
+El resultado X generalmente tiene dimensiones
+``(length(I_1), length(I_2), ..., length(I_n))``, con locación
+``(i_1, i_2, ..., i_n)`` de X que contiene el valor
 ``A[I_1[i_1], I_2[i_2], ..., I_n[i_n]]``. Trailing dimensions indexed with
-scalars are dropped. For example, the dimensions of ``A[I, 1]`` will be
-``(length(I),)``. The size of a dimension indexed by a boolean vector
-will be the number of true values in the vector (they behave as if they were
-transformed with ``find``).
+scalars are dropped. Por ejemplo, las dimensiones de ``A[I, 1]`` serán
+``(length(I),)``. El tamaño de una dimensión indexada por un vector 
+booleano será el número de valores verdaderos en el vector (que se 
+comportan como si se transformaron con `find```).
 
-Indexing syntax is equivalent to a call to ``getindex``::
+Sintaxis  de indexación es equivalente a una llamada a `` getindex`` ::
 
     X = getindex(A, I_1, I_2, ..., I_n)
 
@@ -195,11 +196,11 @@ Ejemplo::
 Asignación
 ----------
 
-The general syntax for assigning values in an n-dimensional array A is::
+La sintaxis general para la asignación de valores en una matriz n-dimensional A es ::
 
     A[I_1, I_2, ..., I_n] = X
 
-where each I\_k may be:
+donde cada  I\_k puede ser:
 
 1. A scalar value
 2. A ``Range`` of the form ``:``, ``a:b``, or ``a:b:c``
