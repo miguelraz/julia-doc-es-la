@@ -441,8 +441,8 @@ you can use the same names with an ``sp`` prefix:
         [2, 2]  =  1.0
         [3, 3]  =  1.0
 
-The ``sparse`` function is often a handy way to construct sparse
-matrices. It takes as its input a vector ``I`` of row indices, a
+La función ``sparse`` es a menudo una forma práctica para construir
+matrices dispersas. It takes as its input a vector ``I`` of row indices, a
 vector ``J`` of column indices, and a vector ``V`` of nonzero
 values. ``sparse(I,J,V)`` constructs a sparse matrix such that
 ``S[I[k], J[k]] = V[k]``.
@@ -458,8 +458,8 @@ values. ``sparse(I,J,V)`` constructs a sparse matrix such that
          [5 ,  9]  =  3
          [3 , 18]  =  -5
 
-The inverse of the ``sparse`` function is ``findn``, which
-retrieves the inputs used to create the sparse matrix.
+La inversa de la fución ``sparse`` es ``findn``, que recupera
+las entradas que se utilizan para crear la matriz dispersa.
 
 ::
 
@@ -469,8 +469,8 @@ retrieves the inputs used to create the sparse matrix.
     julia> findn_nzs(S)
     ([1, 4, 5, 3],[4, 7, 9, 18],[1, 2, 3, -5])
 
-Another way to create sparse matrices is to convert a dense matrix
-into a sparse matrix using the ``sparse`` function:
+Otra forma de crear matrices dispersas es convertir una matriz densa
+en una matriz dispersa usando la función ``sparse``:
 
 ::
 
@@ -482,9 +482,9 @@ into a sparse matrix using the ``sparse`` function:
         [4, 4]  =  1.0
         [5, 5]  =  1.0
 
-You can go in the other direction using the ``dense`` or the ``full``
-function. The ``issparse`` function can be used to query if a matrix
-is sparse.
+Puedes ir en la otra dirección utilizando  ``dense`` o la función ``full``.
+La función ``issparse`` puede ser utilizado para consultar si una matriz 
+es dispersa.
 
 ::
 
@@ -495,10 +495,9 @@ Operaciones con una matriz dispersa
 -----------------------------------
 
 Las operaciones aritméticas sobre matrices dispersas también funcionan como lo hacen en 
-matrices densas. Indexing of, assignment into, and concatenation of sparse
-matrices work in the same way as dense matrices. Indexing operations,
-especially assignment, are expensive, when carried out one element at
-a time. In many cases it may be better to convert the sparse matrix
-into ``(I,J,V)`` format using ``find_nzs``, manipulate the nonzeros or
-the structure in the dense vectors ``(I,J,V)``, and then reconstruct
-the sparse matrix.
+matrices densas. Indexación de, asignación en, y concatenación de matrices dispersas 
+funcionan de la misma manera que las matrices densas. Operaciones de indexación,
+en especial la asignación, son costosos, cuando se lleva a cabo uno de los elementos
+a la vez. En muchos casos, puede ser mejor convertir la matriz dispersa en el 
+formato ``(I,J,V)`` usando ``find_nzs``, manipular los nonzeros o la estructura
+en los vectores densos ``(I,J,V)``, y luego reconstruir la matriz dispersa.
