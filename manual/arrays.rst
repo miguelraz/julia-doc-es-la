@@ -250,10 +250,11 @@ Concatenation operators may also be used for concatenating arrays:
 Operadores y Funciones vectorizadas
 -----------------------------------
 
-The following operators are supported for arrays. In case of binary
-operators, the dot version of the operator should be used when both
-inputs are non-scalar, and any version of the operator may be used if
-one of the inputs is a scalar.
+Las siguientes operaciones son soportadas por los arreglos. En el caso de operaciones 
+binarias, the dot version of the operator should be used when both
+inputs are non-scalar, y cualquier versión del operador puede ser usado 
+Si uno de las entradas es un escalar. 
+
 
 1.  Unary Arithmetic — ``-``
 2.  Binary Arithmetic — ``+``, ``-``, ``*``, ``.*``, ``/``, ``./``,
@@ -309,7 +310,7 @@ function::
      1.31849  1.44364
      1.56107  1.68622
 
-Implementation
+Implementación
 --------------
 
 The base array type in Julia is the abstract type
@@ -329,11 +330,11 @@ storage-specific operations are all that have to be implemented for
 ``Array``, so that the rest of the array library can be implemented in a
 generic manner for ``AbstractArray``.
 
-``SubArray`` is a specialization of ``AbstractArray`` that performs
+``SubArray`` es una  especialización de  ``AbstractArray`` that performs
 indexing by reference rather than by copying. A ``SubArray`` is created
 with the ``sub`` function, which is called the same way as ``getindex`` (with
-an array and a series of index arguments). The result of ``sub`` looks
-the same as the result of ``getindex``, except the data is left in place.
+an array and a series of index arguments). Los resultados de of ``sub`` muestran
+Los mismos resultados de  ``getindex``, except the data is left in place.
 ``sub`` stores the input index vectors in a ``SubArray`` object, which
 can later be used to index the original array indirectly.
 
@@ -342,8 +343,8 @@ to make it possible for Julia to call a wider range of BLAS and LAPACK
 functions by passing them either ``Array`` or ``SubArray`` objects, and
 thus saving inefficiencies from indexing and memory allocation.
 
-The following example computes the QR decomposition of a small section
-of a larger array, without creating any temporaries, and by calling the
+El siguiente ejemplo calcula la descomposición QR de una pequeña sección de una grande arreglo
+, without creating any temporaries, and by calling the
 appropriate LAPACK function with the right leading dimension size and
 stride parameters.
 
@@ -362,7 +363,7 @@ stride parameters.
      0.362621  0.389317   0.702764   0.385856      0.155392  0.497805   0.430512
      0.504046  0.532631   0.477461   0.225632      0.919701  0.0453513  0.505329
     
-    julia> b = sub(a, 2:2:8,2:2:4)
+    julia> b = sub(a, 2:2:8,2:  VERIFICAR ESTA LÍNEA DE CÓDIGO 
     4x2 SubArray of 10x10 Float64 Array:
      0.235315  0.020172
      0.622764  0.372167
@@ -387,7 +388,7 @@ stride parameters.
  Matrices dispersas
 *******************
 
-`Matrices disperarsas <http://en.wikipedia.org/wiki/Sparse_matrix>`_ son
+`Matrices dispersas <http://en.wikipedia.org/wiki/Sparse_matrix>`_ son
 matrices que contienen suficientes ceros que almacenándolos en una estructura de datos 
 especial supone un ahorro de espacio y tiempo de ejecución. Matrices
 dispersas puede utilizarse cuando las operaciones en la representación disperar de una 
@@ -397,7 +398,7 @@ la realización de las mismas operaciones en una matriz densa..
 Compressed Sparse Column (CSC) Storage
 --------------------------------------
 
-In julia, sparse matrices are stored in the `Compressed Sparse Column
+En Julia, sparse matrices are stored in the `Compressed Sparse Column
 (CSC) format
 <http://en.wikipedia.org/wiki/Sparse_matrix#Compressed_sparse_column_.28CSC_or_CCS.29>`_. Julia
 sparse matrices have the type ``SparseMatrixCSC{Tv,Ti}``, where ``Tv``
