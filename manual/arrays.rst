@@ -420,10 +420,10 @@ The compressed sparse column storage makes it easy and quick to access
 the elements in the column of a sparse matrix, whereas accessing the
 sparse matrix by rows is considerably slower. Operations such as
 insertion of nonzero values one at a time in the CSC structure tend to
-be slow. This is because all elements of the sparse matrix that are
+be slow. Esto es por que todos los elementos de la matriz dispersa that are
 beyond the point of insertion have to be moved one place over.
 
-All operations on sparse matrices are carefully implemented to exploit
+Todas las operaciones en matrices dispersas son cuidadosamente implementadas  operations on spa to exploit REVISAR
 the CSC data structure for performance, and to avoid expensive operations.
 
 Constructores de matrices dispersas
@@ -446,7 +446,7 @@ you can use the same names with an ``sp`` prefix:
         [3, 3]  =  1.0
 
 La función ``sparse`` es a menudo una forma práctica para construir
-matrices dispersas. It takes as its input a vector ``I`` of row indices, a
+matrices dispersas. It takes as its input a vector ``I`` of row indices, un
 vector ``J`` of column indices, y un vector  ``V`` de valores nonzero. 
 ``sparse(I,J,V)`` construye una matriz dispersa tal como
 ``S[I[k], J[k]] = V[k]``.
