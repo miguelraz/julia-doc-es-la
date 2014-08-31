@@ -426,9 +426,9 @@ the CSC data structure for performance, and to avoid expensive operations.
 Constructores de matrices dispersas
 ----------------------------------
 
-The simplest way to create sparse matrices are using functions
-equivalent to the ``zeros`` and ``eye`` functions that Julia provides
-for working with dense matrices. To produce sparse matrices instead,
+El camino simple para crear matrices son usando funciones
+equivalentes a las funciones  ``zeros``  ``eye`` que Julia dispone
+para trabajar con matrices densas. To produce sparse matrices instead,
 you can use the same names with an ``sp`` prefix:
 
 ::
@@ -444,8 +444,8 @@ you can use the same names with an ``sp`` prefix:
 
 La función ``sparse`` es a menudo una forma práctica para construir
 matrices dispersas. It takes as its input a vector ``I`` of row indices, a
-vector ``J`` of column indices, and a vector ``V`` of nonzero
-values. ``sparse(I,J,V)`` constructs a sparse matrix such that
+vector ``J`` of column indices, y un vector  ``V`` de valores nonzero. 
+``sparse(I,J,V)`` construye una matriz dispersa tal como
 ``S[I[k], J[k]] = V[k]``.
 
 ::
