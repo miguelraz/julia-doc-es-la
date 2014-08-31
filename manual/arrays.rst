@@ -129,9 +129,9 @@ actual y su vecino de la izquierda y derecha a lo largo de una cuadrícula 1-d.
      0.245097
      0.241854
 
-NOTA: En el ejemplo anterior, ``x`` is declared as constant because type
-inference in Julia does not work as well on non-constant global
-variables.
+NOTA: En el ejemplo anterior, ``x`` está declarada como constante
+porque la inferencia de tipos en Julia no funciona tan bien en las
+variables globales no constantes.
 
 El tipo de matriz resultante se deduce de la expresión; para controlar 
 el tipo explícitamente, tel tipo se puede anteponer a la comprensión. Por ejemplo,
@@ -325,15 +325,16 @@ un mensaje para cualquier implementación específica de un arreglo.
 
 El tipo ``Array{T,n}`` es una instancia específica de ``AbstractArray``
 donde los elementos se almacenan en orden por columnas. ``Vector`` y
-``Matrix`` are aliases for the 1-d and 2-d cases. Specific operations
-such as scalar indexing, assignment, and a few other basic
-storage-specific operations are all that have to be implemented for
-``Array``, so that the rest of the array library can be implemented in a
-generic manner for ``AbstractArray``.
+``Matrix`` are aliases for the 1-d and 2-d cases. Las operaciones 
+específicas tales como la indexación escalar, asignaciones, y algunas 
+otras operaciones de almacenamiento específica básicos son todo lo que
+tiene que ser implementado para `` Array``, de modo que el resto de la
+biblioteca matriz puede ser implementado de una manera genérica
+para `` AbstractArray``.
 
-``SubArray`` es una  especialización de  ``AbstractArray`` that performs
-indexing by reference rather than by copying. A ``SubArray`` is created
-with the ``sub`` function, which is called the same way as ``getindex`` (with
+``SubArray`` es una  especialización de  ``AbstractArray`` que realiza 
+la indexación por referencia en lugar de copiando. ``SubArray`` es creado
+con la función ``sub``,que se llama del mismo modo que `` getindex`` (with
 an array and a series of index arguments). Los resultados de of ``sub`` muestran
 Los mismos resultados de  ``getindex``, except the data is left in place.
 ``sub`` stores the input index vectors in a ``SubArray`` object, que más
