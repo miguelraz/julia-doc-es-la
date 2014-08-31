@@ -202,16 +202,16 @@ La sintaxis general para la asignación de valores en una matriz n-dimensional A
 
 donde cada  I\_k puede ser:
 
-1. A scalar value
-2. A ``Range`` of the form ``:``, ``a:b``, or ``a:b:c``
-3. An arbitrary integer vector, including the empty vector ``[]``
-4. A boolean vector
+1. Un valor escalar
+2. Un ``Range`` de la forma ``:``, ``a:b``, o ``a:b:c``
+3. Un vector entero arbitrario, incluyendo el vector vacío ``[]``
+4. Un vector booleano
 
-The size of X should be ``(length(I_1), length(I_2), ..., length(I_n))``, and
-the value in location ``(i_1, i_2, ..., i_n)`` of A is overwritten with
-the value ``X[I_1[i_1], I_2[i_2], ..., I_n[i_n]]``.
+El tamaño de X debería ser ``(length(I_1), length(I_2), ..., length(I_n))``, y
+el valor de locación ``(i_1, i_2, ..., i_n)`` de A es sobreescrito con el valor
+``X[I_1[i_1], I_2[i_2], ..., I_n[i_n]]``.
 
-Index assignment syntax is equivalent to a call to ``setindex!``::
+La sintaxis de asignación de índices es equivalente a una llamada a `` setindex! `` ::
 
       A = setindex!(A, X, I_1, I_2, ..., I_n)
 
@@ -232,16 +232,16 @@ Ejemplo::
 La concatenación
 ----------------
 
-Arrays can be concatenated along any dimension using the following
-syntax:
+Las matrices pueden ser concatenados a lo largo de cualquier dimensión 
+con la siguiente sintaxis:
 
-1. ``cat(dim, A...)`` — concatenate input n-d arrays along the dimension
+1. ``cat(dim, A...)`` — concatenar la entrada de n-d arreglos largo de la dimensión
    ``dim``
-2. ``vcat(A...)`` — Shorthand for ``cat(1, A...)``
-3. ``hcat(A...)`` — Shorthand for ``cat(2, A...)``
+2. ``vcat(A...)`` — Abreviatura de ``cat(1, A...)``
+3. ``hcat(A...)`` — Abreviatura de ``cat(2, A...)``
 4. ``hvcat(A...)``
 
-Concatenation operators may also be used for concatenating arrays:
+Operadores de concatenación también se pueden utilizar para concatenar arreglos:
 
 1. ``[A B C ...]`` — calls ``hcat``
 2. ``[A, B, C, ...]`` — calls ``vcat``
@@ -257,31 +257,31 @@ Si uno de las entradas es un escalar.
 
 
 1.  Unary Arithmetic — ``-``
-2.  Binary Arithmetic — ``+``, ``-``, ``*``, ``.*``, ``/``, ``./``,
+2.  Aritmética binaria — ``+``, ``-``, ``*``, ``.*``, ``/``, ``./``,
     ``\``, ``.\``, ``^``, ``.^``, ``div``, ``mod``
-3.  Comparison — ``==``, ``!=``, ``<``, ``<=``, ``>``, ``>=``
+3.  Comparación — ``==``, ``!=``, ``<``, ``<=``, ``>``, ``>=``
 4.  Unary Boolean or Bitwise — ``~``
 5.  Binary Boolean or Bitwise — ``&``, ``|``, ``$``
-6.  Trigonometrical functions — ``sin``, ``cos``, ``tan``, ``sinh``,
+6.  Funciones trigonométricas — ``sin``, ``cos``, ``tan``, ``sinh``,
     ``cosh``, ``tanh``, ``asin``, ``acos``, ``atan``, ``atan2``,
     ``sec``, ``csc``, ``cot``, ``asec``, ``acsc``, ``acot``, ``sech``,
     ``csch``, ``coth``, ``asech``, ``acsch``, ``acoth``, ``sinc``,
     ``cosc``, ``hypot``
-7.  Logarithmic functions — ``log``, ``log2``, ``log10``, ``log1p``
-8.  Exponential functions — ``exp``, ``expm1``, ``exp2``, ``ldexp``
-9.  Rounding functions — ``ceil``, ``floor``, ``trunc``, ``round``,
+7.  Funciones logarítmicas — ``log``, ``log2``, ``log10``, ``log1p``
+8.  Funciones exponenciales — ``exp``, ``expm1``, ``exp2``, ``ldexp``
+9.  Funciones de redondeo — ``ceil``, ``floor``, ``trunc``, ``round``,
     ``ipart``, ``fpart``
-10. Other mathematical functions — ``min``, ``max,`` ``abs``, ``pow``,
+10. Otras funciones matemáticas — ``min``, ``max,`` ``abs``, ``pow``,
     ``sqrt``, ``cbrt``, ``erf``, ``erfc``, ``gamma``, ``lgamma``,
     ``real``, ``conj``, ``clamp``
 
 Difundir ampliamente
 ---------------------
 
-It is sometimes useful to perform element-by-element binary operations
-on arrays of different sizes, such as adding a vector to each column
-of a matrix.  An inefficient way to do this would be to replicate the
-vector to the size of the matrix::
+A veces es útil para realizar operaciones binarias elemento-por-elemento
+en arreglos de diferentes tamaños, como la adición de un vector a cada
+columna de una matriz.  Una forma ineficiente de hacer esto sería de
+replicar el vector con el tamaño de la matriz ::
 
     julia> a = rand(2,1); A = rand(2,3);
 
@@ -290,11 +290,11 @@ vector to the size of the matrix::
      0.848333  1.66714  1.3262 
      1.26743   1.77988  1.13859
 
-This is wasteful when dimensions get large, so Julia offers the
-MATLAB-inspired ``bsxfun``, which expands singleton dimensions in
-array arguments to match the corresponding dimension in the other
-array without using extra memory, and applies the given binary
-function::
+This is wasteful when dimensions get large, así que Julia ofrece 
+``bsxfun`` inspirado en MATLAB, que amplía las dimensiones simples 
+en argumentos de matrices para que coincida con la dimensión
+correspondiente en la otra matriz sin utilizar más memoria, 
+y se aplica la función binaria dada::
 
     julia> bsxfun(+, a, A)
     2x3 Float64 Array:
@@ -313,17 +313,18 @@ function::
 Implementación
 --------------
 
-The base array type in Julia is the abstract type
-``AbstractArray{T,n}``. It is parametrized by the number of dimensions
-``n`` and the element type ``T``. ``AbstractVector`` and
-``AbstractMatrix`` are aliases for the 1-d and 2-d cases. Operations on
-``AbstractArray`` objects are defined using higher level operators and
-functions, in a way that is independent of the underlying storage class.
-These operations are guaranteed to work correctly as a fallback for any
-specific array implementation.
+El tipo de matriz base de de Julia es el tipo abstracto
+``AbstractArray{T,n}``. Se parametrizada por el número de dimensiones
+``n`` y el tipo de elemento ``T``. ``AbstractVector`` y
+``AbstractMatrix`` son alias para los casos 1-D y 2-D. Operaciones en
+objetos ``AbstractArray`` son definidos usando definidas con operadores
+y funciones de nivel superior, de una manera que es independiente 
+de la clase de almacenamiento subyacente.
+Estas operaciones están garantizados para funcionar correctamente como
+un mensaje para cualquier implementación específica de un arreglo.
 
-The ``Array{T,n}`` type is a specific instance of ``AbstractArray``
-where elements are stored in column-major order. ``Vector`` and
+El tipo ``Array{T,n}`` es una instancia específica de ``AbstractArray``
+donde los elementos se almacenan en orden por columnas. ``Vector`` y
 ``Matrix`` are aliases for the 1-d and 2-d cases. Specific operations
 such as scalar indexing, assignment, and a few other basic
 storage-specific operations are all that have to be implemented for
@@ -335,13 +336,13 @@ indexing by reference rather than by copying. A ``SubArray`` is created
 with the ``sub`` function, which is called the same way as ``getindex`` (with
 an array and a series of index arguments). Los resultados de of ``sub`` muestran
 Los mismos resultados de  ``getindex``, except the data is left in place.
-``sub`` stores the input index vectors in a ``SubArray`` object, which
-can later be used to index the original array indirectly.
+``sub`` stores the input index vectors in a ``SubArray`` object, que más
+tarde se pueden usar para indexar la matriz original indirectamente.
 
-``StridedVector`` and ``StridedMatrix`` are convenient aliases defined
+``StridedVector`` y ``StridedMatrix`` are convenient aliases defined
 to make it possible for Julia to call a wider range of BLAS and LAPACK
-functions by passing them either ``Array`` or ``SubArray`` objects, and
-thus saving inefficiencies from indexing and memory allocation.
+functions by passing them either ``Array`` or ``SubArray`` objects, y por 
+lo tanto el ahorro de las ineficiencias de la indexación y la asignación de memoria.
 
 El siguiente ejemplo calcula la descomposición QR de una pequeña sección de una grande arreglo
 , without creating any temporaries, and by calling the
@@ -363,7 +364,7 @@ stride parameters.
      0.362621  0.389317   0.702764   0.385856      0.155392  0.497805   0.430512
      0.504046  0.532631   0.477461   0.225632      0.919701  0.0453513  0.505329
     
-    julia> b = sub(a, 2:2:8,2:  VERIFICAR ESTA LÍNEA DE CÓDIGO 
+    julia> b = sub(a, 2:2:8,2:2:4)  
     4x2 SubArray of 10x10 Float64 Array:
      0.235315  0.020172
      0.622764  0.372167
