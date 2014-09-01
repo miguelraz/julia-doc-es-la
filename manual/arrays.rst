@@ -346,7 +346,7 @@ LAPACK haciéndolas pasar ya sea por objetos `` Array`` o `` SubArray``, y por
 lo tanto el ahorro de las ineficiencias de la indexación y la asignación de memoria.
 
 El siguiente ejemplo calcula la descomposición QR de una pequeña sección de una grande arreglo
-, without creating any temporaries, and by calling the
+, sin crear ningún temporal, and by calling the
 appropriate LAPACK function with the right leading dimension size and
 stride parameters.
 
@@ -432,8 +432,8 @@ Constructores de matrices dispersas
 
 El camino simple para crear matrices son usando funciones
 equivalentes a las funciones  ``zeros``  ``eye`` que Julia dispone
-para trabajar con matrices densas. To produce sparse matrices instead,
-you can use the same names with an ``sp`` prefix:
+para trabajar con matrices densas. Para producir matrices dispersas en lugar,
+puede utilizar las mismos nombres con un prefijo `` sp``:
 
 ::
 
