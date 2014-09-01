@@ -397,34 +397,35 @@ dispersas puede utilizarse cuando las operaciones en la representación disperar
 matriz conducen a considerables aumentos en el tiempo o el espacio, en comparación con
 la realización de las mismas operaciones en una matriz densa..
 
-Compressed Sparse Column (CSC) Storage
---------------------------------------
+Columna dispersa comprimido (CSC) Almacenamiento
+------------------------------------------------
 
-En Julia, sparse matrices are stored in the `Compressed Sparse Column
+En Julia, matrices dispersas se almacenan en la `Columna dispersa comprimido
 (CSC) format
-<http://en.wikipedia.org/wiki/Sparse_matrix#Compressed_sparse_column_.28CSC_or_CCS.29>`_. Julia
-sparse matrices have the type ``SparseMatrixCSC{Tv,Ti}``, where ``Tv``
-is the type of the nonzero values, and ``Ti`` is the integer type for
-storing column pointers and row indices. 
+<http://en.wikipedia.org/wiki/Sparse_matrix#Compressed_sparse_column_.28CSC_or_CCS.29>`_. En Julia 
+las matrices dispersas tienen el tipo  ``SparseMatrixCSC{Tv,Ti}``, donde ``Tv``
+es el tipo de los valores distintos de cero, y `` Ti`` es el tipo entero
+para almacenar punteros de columna y índices de fila. 
 ::
 
     type SparseMatrixCSC{Tv,Ti<:Integer} <: AbstractSparseMatrix{Tv,Ti}
-        m::Int                  # Number of rows
-        n::Int                  # Number of columns
-        colptr::Vector{Ti}      # Column i is in colptr[i]:(colptr[i+1]-1)
-        rowval::Vector{Ti}      # Row values of nonzeros
-        nzval::Vector{Tv}       # Nonzero values
+        m::Int                  # Número de filas
+        n::Int                  # Número de columnas
+        colptr::Vector{Ti}      # Columna i es en colptr[i]:(colptr[i+1]-1)
+        rowval::Vector{Ti}      # Valores de fila distintos de cero
+        nzval::Vector{Tv}       # Valores distintos de cero
     end
 
-The compressed sparse column storage makes it easy and quick to access
-the elements in the column of a sparse matrix, whereas accessing the
-sparse matrix by rows is considerably slower. Operations such as
-insertion of nonzero values one at a time in the CSC structure tend to
-be slow. Esto es por que todos los elementos de la matriz dispersa that are
-beyond the point of insertion have to be moved one place over.
+El almacenamiento columna dispersa comprimido hace que sea fácil y rápida para
+acceder a los elementos en la columna de una matriz dispersa, mientras que el acceso
+a la matriz dispersa por filas es considerablemente más lento. Operaciones 
+tales como la inserción de los valores distintos de cero de uno en uno en 
+la estructura CSC tienden a ser lentos. Esto es por que todos los elementos 
+de la matriz dispersa que están más allá del punto de inserción que tenga
+que mover un solo lugar más..
 
-Todas las operaciones en matrices dispersas son cuidadosamente implementadas  operations on spa to exploit REVISAR
-the CSC data structure for performance, and to avoid expensive operations.
+Todas las operaciones sobre matrices dispersas se implementan cuidadosamente 
+para aprovechar la estructura de datos de CSC para el funcionamiento, y evitar costosas operaciones.
 
 Constructores de matrices dispersas
 ----------------------------------
@@ -446,8 +447,8 @@ you can use the same names with an ``sp`` prefix:
         [3, 3]  =  1.0
 
 La función ``sparse`` es a menudo una forma práctica para construir
-matrices dispersas. It takes as its input a vector ``I`` of row indices, un
-vector ``J`` of column indices, y un vector  ``V`` de valores nonzero. 
+matrices dispersas. Toma como entrada un vector `` I`` de índices fila, un
+vector de índices columna ``J``, y un vector  ``V`` de valores nonzero. 
 ``sparse(I,J,V)`` construye una matriz dispersa tal como
 ``S[I[k], J[k]] = V[k]``.
 
