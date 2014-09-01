@@ -340,9 +340,9 @@ Los mismos resultados de  ``getindex``, except the data is left in place.
 ``sub`` stores the input index vectors in a ``SubArray`` object, que más
 tarde se pueden usar para indexar la matriz original indirectamente.
 
-``StridedVector`` y ``StridedMatrix`` are convenient aliases defined
-to make it possible for Julia to call a wider range of BLAS and LAPACK
-functions by passing them either ``Array`` or ``SubArray`` objects, y por 
+``StridedVector`` y ``StridedMatrix`` son definidos los alias convenientes 
+para hacer posible que Julia llame a un rango más amplio de funciones BLAS y
+LAPACK haciéndolas pasar ya sea por objetos `` Array`` o `` SubArray``, y por 
 lo tanto el ahorro de las ineficiencias de la indexación y la asignación de memoria.
 
 El siguiente ejemplo calcula la descomposición QR de una pequeña sección de una grande arreglo
