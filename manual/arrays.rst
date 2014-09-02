@@ -325,7 +325,7 @@ un mensaje para cualquier implementación específica de un arreglo.
 
 El tipo ``Array{T,n}`` es una instancia específica de ``AbstractArray``
 donde los elementos se almacenan en orden por columnas. ``Vector`` y
-``Matrix`` are aliases for the 1-d and 2-d cases. Las operaciones 
+``Matrix`` son aliases para los casos 1-d y 2-d. Las operaciones 
 específicas tales como la indexación escalar, asignaciones, y algunas 
 otras operaciones de almacenamiento específica básicos son todo lo que
 tiene que ser implementado para `` Array``, de modo que el resto de la
@@ -334,10 +334,10 @@ para `` AbstractArray``.
 
 ``SubArray`` es una  especialización de  ``AbstractArray`` que realiza 
 la indexación por referencia en lugar de copiando. ``SubArray`` es creado
-con la función ``sub``,que se llama del mismo modo que `` getindex`` (with
-an array and a series of index arguments). Los resultados de of ``sub`` muestran
-Los mismos resultados de  ``getindex``, except the data is left in place.
-``sub`` stores the input index vectors in a ``SubArray`` object, que más
+con la función ``sub``,que se llama del mismo modo que `` getindex`` (con un 
+arreglo y una serie de argumentos índice). Los resultados de  ``sub`` muestran
+los mismos resultados de  ``getindex``, excepto los datos se dejan en su lugar.
+``sub`` almacena los vectores de índice de entrada en un objeto `` SubArray``, que más
 tarde se pueden usar para indexar la matriz original indirectamente.
 
 ``StridedVector`` y ``StridedMatrix`` son definidos los alias convenientes 
