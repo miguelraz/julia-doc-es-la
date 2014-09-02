@@ -154,7 +154,6 @@ de tipo ``Any``::
 Indexando
 --------
 
-La sintaxis general para 
 La sintaxis general para la indexación en un arreglo n-dimensional  A es ::
 
     X = A[I_1, I_2, ..., I_n]
@@ -251,8 +250,8 @@ Operadores y Funciones vectorizadas
 -----------------------------------
 
 Las siguientes operaciones son soportadas por los arreglos. En el caso de operaciones 
-binarias, the dot version of the operator should be used when both
-inputs are non-scalar, y cualquier versión del operador puede ser usado 
+binarias, la versión punto del operador  operador será usado cuando ambas 
+Entradas no son escalares, y cualquier versión del operador puede ser usado 
 Si uno de las entradas es un escalar. 
 
 
@@ -314,7 +313,7 @@ Implementación
 --------------
 
 El tipo de matriz base de de Julia es el tipo abstracto
-``AbstractArray{T,n}``. Se parametrizada por el número de dimensiones
+``AbstractArray{T,n}``. Si es parametrizada por el número de dimensiones
 ``n`` y el tipo de elemento ``T``. ``AbstractVector`` y
 ``AbstractMatrix`` son alias para los casos 1-D y 2-D. Operaciones en
 objetos ``AbstractArray`` son definidos usando definidas con operadores
