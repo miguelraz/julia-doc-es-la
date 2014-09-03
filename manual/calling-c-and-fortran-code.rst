@@ -1,12 +1,12 @@
 .. _man-calling-c-and-fortran-code:
 
 ****************************
- Calling C and Fortran Code  
+Llamando código C y Fortran
 ****************************
 
-Though most code can be written in Julia, there are many high-quality,
-mature libraries for numerical computing already written in C and
-Fortran. To allow easy use of this existing code, Julia makes it simple
+Aunque la mayoría del código puede ser escrito en Julia, hay muchos de alta calidad, 
+bibliotecas maduras para cálculo numérico ya escrito en C y Fortran. 
+ara permitir el uso fácil de este código existente, Julia makes it simple
 and efficient to call C and Fortran functions. Julia has a "no
 boilerplate" philosophy: functions can be called directly from Julia
 without any "glue" code, code generation, or compilation — even from the
@@ -38,7 +38,7 @@ the current process. This form can be used to call C library functions,
 functions in the Julia runtime, or functions in an application linked to
 Julia.
 
-Finally, you can use ``ccall`` to actually generate a call to the
+Finalmente, you can use ``ccall`` to actually generate a call to the
 library function. Arguments to ``ccall`` are as follows:
 
 1. (:function, "library") pair (must be a constant, but see below).
@@ -50,7 +50,7 @@ library function. Arguments to ``ccall`` are as follows:
 4. The following arguments, if any, are the actual argument values
    passed to the function.
 
-As a complete but simple example, the following calls the ``clock``
+Como un ejemplo completo pero simple, the following calls the ``clock``
 function from the standard C library::
 
     julia> t = ccall( (:clock, "libc"), Int32, ())
@@ -73,7 +73,7 @@ of an environment variable, one makes a call like this::
     julia> bytestring(path)
     "/bin/bash"
 
-Note that the argument type tuple must be written as ``(Ptr{Uint8},)``,
+Tenga en cuenta que el tipo de argumento tupla debe ser escrito como ``(Ptr{Uint8},)``,
 rather than ``(Ptr{Uint8})``. This is because ``(Ptr{Uint8})`` is just
 ``Ptr{Uint8}``, rather than a 1-tuple containing ``Ptr{Uint8}``::
 
@@ -83,8 +83,8 @@ rather than ``(Ptr{Uint8})``. This is because ``(Ptr{Uint8})`` is just
     julia> (Ptr{Uint8},)
     (Ptr{Uint8},)
 
-In practice, especially when providing reusable functionality, one
-generally wraps ``ccall`` uses in Julia functions that set up arguments
+En la práctica, especialmente cuando se proporciona funcionalidad reutilizable, 
+one generally wraps ``ccall`` uses in Julia functions that set up arguments
 and then check for errors in whatever manner the C or Fortran function
 indicates them, propagating to the Julia caller as exceptions. This is
 especially important since C and Fortran APIs are notoriously
@@ -188,8 +188,8 @@ will behave as if the following were written::
 When a scalar value is passed with ``&`` as an argument of type
 ``Ptr{T}``, the value will first be converted to type ``T``.
 
-Array conversions
-~~~~~~~~~~~~~~~~~
+Conversiones de arreglos
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 When an ``Array`` is passed to C as a ``Ptr`` argument, it is
 "converted" simply by taking the address of the first element. This is
@@ -201,8 +201,8 @@ uninterpreted bytes).
 Therefore, if an ``Array`` contains data in the wrong format, it will
 have to be explicitly converted using a call such as ``int32(a)``.
 
-Type correspondences
-~~~~~~~~~~~~~~~~~~~~
+Tipo de correspondencias
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 On all systems we currently support, basic C/C++ value types may be
 translated to Julia types as follows. Every C type also has a corresponding
