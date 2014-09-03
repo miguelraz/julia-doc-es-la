@@ -383,7 +383,7 @@ Indirect calls
 --------------
 
 The first argument to ``ccall`` can also be an expression evaluated at
-run time. In this case, the expression must evaluate to a ``Ptr``,
+run time. En este caso, the expression must evaluate to a ``Ptr``,
 which will be used as the address of the native function to call. This
 behavior occurs when the first ``ccall`` argument contains references
 to non-constants, such as local variables or function arguments.
